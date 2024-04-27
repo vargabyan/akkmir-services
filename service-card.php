@@ -3,17 +3,53 @@ require 'head.php';
 ?>
 
 
-<section class="core-container banner">
-    <img class="banner_img" src="/images/Rectangle%205490.png" alt="">
-    <div class="banner_content">
-        <p class="banner_title site-header">Сервисный центр для вашего автомобиля</p>
-        <div class="banner_appointment-wrapper">
-            <h1 class="banner_appointment_title">
-                <span>Работаем с 8:00 до 21:00 (без выходных)</span>
-                Выбрать автосервис
-            </h1>
-            <button class="banner_appointment_btn btn-yellow">записаться</button>
+<?php
+include __DIR__ . '/breadcrumb.php';
+breadcrumb([['url' => '/services.php', 'name' => 'Услуги'], ['url' => '', 'name' => 'Зарядка и обслуживание аккумуляторов']]);
+?>
+
+
+<section class="core-container our-works">
+    <h1 class="our-works_header site-header">Ремонт ходовой части</h1>
+    <div class="our-works_content">
+        <div class="our-works_item">
+            <img class="our-works_item_background" src="/images/Vector 322.png" alt="icon">
+            <p class="our-works_title">Радуем своих клиентов</p>
+            <span>с 2016</span>
         </div>
+        <div class="our-works_item">
+            <img class="our-works_item_background" src="/images/Vector 322.png" alt="icon">
+            <p class="our-works_title">Чиним машин в неделю</p>
+            <span>210</span>
+        </div>
+        <div class="our-works_select-car-service">
+            <div class="our-works_select-car-service_text-wrapper">
+                <span>Работаем с 8:00 до 21:00 (без выходных)</span>
+                <p class="our-works_select-car-service_title">Выбрать автосервис и&nbsp;записаться на услугу</p>
+                <button class="our-works_select-car-service_btn btn-yellow">Записаться <span>в автосервис</span></button>
+            </div>
+            <img class="our-works_select-car-service_img" src="/images/Vector 344.png" alt="img">
+            <img class="our-works_select-car-service_img" src="/images/Vector 368.png" alt="img">
+        </div>
+    </div>
+</section>
+
+
+<section class="core-container prices">
+    <h1 class="prices_header site-header">Цены <span>*стоимость может варьироваться в зависимости от марки автомобилей</span></h1>
+    <div class="prices_content">
+        <?php foreach ([1,2,3,4] as $item) { ?>
+            <div class="prices_item">
+                <img class="prices_item-background" src="/images/Vector 365.png" alt="icon">
+                <img class="prices_item-background" src="/images/Vector 368_.png" alt="icon">
+                <p class="prices_item_title">
+                    <span>Обслуживание аккумулятора</span>
+                    Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.
+                </p>
+                <p class="prices_item_price">от <span>2 560 руб.</span></p>
+                <button class="prices_item_btn">записаться</button>
+            </div>
+        <?php } ?>
     </div>
 </section>
 
@@ -74,68 +110,6 @@ $response_data_sale = [
             <?php } ?>
         </div>
     </div>
-</section>
-
-
-<?php
-
-$response_data_services = [
-    [
-        'image' => '/images/9af86cef7963d3bd73f5028b6577c378.jpeg',
-        'title' => 'Ремонт ходовой части',
-    ],
-    [
-        'image' => '/images/c228152cc83364e3417834aa6119c49c.png',
-        'title' => 'Услуги диагноста-автоэлектрика',
-    ],
-    [
-        'image' => '/images/image 10.png"',
-        'title' => 'Шиномонтаж',
-    ],
-    [
-        'image' => '/images/710f2eca8514235077dcf87f872812a4.jpeg',
-        'title' => 'Ремонт тормозной системы',
-    ],
-    [
-        'image' => '/images/b3a6b0dcddf8cd717879bf69226d5e6b.png',
-        'title' => 'Ремонт рулевого управления',
-    ],
-    [
-        'image' => '/images/b3a6b0dcddf8cd717879bf69226d5e6b.png',
-        'title' => 'Ремонт рулевого управления',
-    ],
-]
-
-?>
-
-
-<section class="services-wrapper" data-services-wrapper>
-    <div class="core-container services">
-        <h1 class="site-header">Услуги</h1>
-        <?php foreach ($response_data_services as $item) { ?>
-            <a class="services_item" href="" data-services-item>
-                <img class="services_item_background" src="/images/Vector 348.png" alt="icon">
-                <p class="service_item_title"><?= $item['title'] ?></p>
-                <div class="service_item_content">
-                    <span>подробнее</span>
-                    <img class="service_item_img" src="<?= $item['image'] ?>" alt="img">
-                </div>
-            </a>
-        <?php } ?>
-    </div>
-    <div class="core-container">
-        <button class="services_btn-show-all btn-black" data-services_btn-show-all>Смотреть все услуги</button>
-    </div>
-</section>
-
-
-
-<section class="core-container">
-    <section class="make-an-appointment">
-        <h1 class="make-an-appointment_title site-header">Хочешь записаться на ремонт или ТО</h1>
-        <img class="make-an-appointment_img" src="/images/snapedit_1711452112239 1.png" alt="img">
-        <button class="make-an-appointment_btn">Выбрать автосервис</button>
-    </section>
 </section>
 
 
@@ -401,45 +375,6 @@ $response_data_service_centers = [
 </section>
 
 
-<section class="core-container diagnostics">
-    <h1 class="diagnostics_header site-header"><span>Почему</span> автовладельцы доверяют диагностику автомобиля <span>нашим мастерам</span></h1>
-    <div class="diagnostics_items-wrapper">
-        <div class="diagnostics_item">
-            <span class="diagnostics_item_title">Сбоственный магазин автозапчастей</span>
-            <img class="diagnostics_item_img" src="/images/image 65.png" alt="img">
-        </div>
-        <div class="diagnostics_item">
-            <span class="diagnostics_item_title">Современное оборудование</span>
-            <img class="diagnostics_item_img" src="/images/image 66.png" alt="img">
-        </div>
-        <div class="diagnostics_item">
-            <span class="diagnostics_item_title">Команда профессионалов</span>
-            <img class="diagnostics_item_img" src="/images/image 63.png" alt="img">
-            <img class="diagnostics_item_img" src="/images/image 63_.png" alt="img">
-        </div>
-        <div class="diagnostics_item">
-            <span class="diagnostics_item_title">Ремонт авто любых марок</span>
-            <div class="diagnostics_item_img-wrapper">
-                <img src="/images/image 75.png" alt="img">
-                <img src="/images/image 72.png" alt="img">
-                <img src="/images/image 74.png" alt="img">
-                <img src="/images/image 68.png" alt="img">
-                <img src="/images/image 69.png" alt="img">
-                <img src="/images/image 69 (1).png" alt="img">
-                <img src="/images/image 70.png" alt="img">
-                <img src="/images/image 71.png" alt="img">
-                <img src="/images/image 73.png" alt="img">
-                <img src="/images/image 68 (1).png" alt="img">
-            </div>
-        </div>
-        <div class="diagnostics_item">
-            <span class="diagnostics_item_title">Обслуживание корпоративных клиентов</span>
-            <img class="diagnostics_item_img" src="/images/image 67.png" alt="img">
-        </div>
-    </div>
-</section>
-
-
 <?php
 
 $response_data_reviews = [
@@ -502,28 +437,6 @@ $response_data_reviews = [
                         </div>
                     </div>
                 <?php } ?>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="core-container about-company">
-    <h1 class="about-company_header site-header"><span>о компании</span> Мы компания 12&nbsp;ВОЛЬТ <span>радуем своих клиентов</span> с 2010 года</h1>
-    <div class="about-company_content">
-        <div class="about-company_about-us">
-            <p class="about-company_about-us_title">Рассказываем о себе и своем опыте</p>
-            <a class="about-company_about-us_link" href="">Подробнее</a>
-        </div>
-        <div class="about-company_our-team">
-            <p class="about-company_our-team_title">Наша команда</p>
-            <div class="about-company_our-team_img-wrapper">
-                <img class="about-company_our-team_img" src="/images/Ellipse 809.png" alt="img">
-                <img class="about-company_our-team_img" src="/images/Ellipse 810.png" alt="img">
-                <img class="about-company_our-team_img" src="/images/Ellipse 811.png" alt="img">
-                <img class="about-company_our-team_img" src="/images/Ellipse 812.png" alt="img">
-                <img class="about-company_our-team_img" src="/images/Ellipse 813.png" alt="img">
-                <span></span>
             </div>
         </div>
     </div>

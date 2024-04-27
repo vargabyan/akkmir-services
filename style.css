@@ -67,6 +67,7 @@ table {
 body {
     box-sizing: border-box;
     font-family: "Bicubik Regular", sans-serif;
+    color: var(--core-color);
 }
 
 button {
@@ -1023,7 +1024,962 @@ button {
 }
 
 
+.service-centers {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
 
+.service-centers_header {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-centers_header span {
+    color: #CCC;
+}
+
+.service-centers_content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.service-centers_city-btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.service-centers_city-btn-wrapper button {
+    display: flex;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: #F9F9F9;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+
+    color: var(--core-color);
+    text-align: center;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.service-centers_city-btn-wrapper button.active {
+    background: #FFDB5B;
+    cursor: inherit;
+}
+
+.service-centers_address-wrapper {
+    margin-top: 10px;
+}
+
+.service-centers_address {
+    display: none;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    max-height: min-content;
+    height: min-content;
+}
+
+.service-centers_address.active {
+    display: grid;
+}
+
+.service-centers_address_item {
+    display: none;
+    flex-direction: column;
+    gap: 28px;
+    position: relative;
+    padding: 20px;
+    height: max-content;
+}
+
+.service-centers_address_item:nth-child(1),
+.service-centers_address_item:nth-child(2) {
+    display: flex;
+}
+
+.service-centers_address_item.active {
+    display: flex;
+}
+
+.service-centers_address_item-background {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.service-centers_address_item-background.active {
+    display: block;
+}
+
+.service-centers_address_item_head {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-centers_address_item_address {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 18px;
+    line-height: 38px;
+    text-transform: uppercase;
+}
+
+.service-centers_address_item_address span {
+    color: #ABABAB;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.service-centers_address_item_tel:before {
+    display: block;
+    content: '';
+    width: 58px;
+    height: 58px;
+    background-image: url("data:image/svg+xml,%3Csvg width='58' height='58' viewBox='0 0 58 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='29' cy='29' r='29' fill='%23F9F9F9'/%3E%3Cpath d='M27.8132 30.1858C29.3401 31.7115 31.1092 33.1716 31.8085 32.4724C32.8088 31.4723 33.4262 30.6005 35.6331 32.374C37.8392 34.1466 36.1444 35.3289 35.175 36.2972C34.056 37.4159 29.8851 36.357 25.7625 32.2361C21.6408 28.1143 20.5846 23.9442 21.7044 22.8255C22.6739 21.8553 23.8507 20.1619 25.6236 22.3674C27.3975 24.573 26.5264 25.1902 25.5242 26.1913C24.8278 26.8905 26.2872 28.6592 27.8132 30.1858Z' fill='%23343434'/%3E%3C/svg%3E%0A");
+}
+
+.service-centers_address_item_tel {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+
+    color: var(--core-color);
+    font-size: 24px;
+}
+
+.service-centers_address_item_working-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.service-centers_address_item_working-hours span {
+    color: #ABABAB;
+}
+
+.service-centers_address_item_form-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-centers_address_item_btn-open-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+
+    border-radius: 10px;
+    background: #F9F9F9;
+    border: none;
+    padding: 13px 13px;
+
+    text-align: left;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.service-centers_address_item_btn-open-form.active {
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 0;
+}
+
+.service-centers_address_item_btn-open-form:after {
+    display: block;
+    content: '';
+    max-width: 44px;
+    width: 100%;
+    height: 44px;
+    background-image: url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 44 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='22' cy='22' r='22' fill='%23FFDB5B'/%3E%3Cpath d='M11 22H33' stroke='%23343434'/%3E%3Cpath d='M22 33L22 11' stroke='%23343434'/%3E%3C/svg%3E%0A");
+}
+
+.service-centers_address_item_btn-open-form.active:after {
+    background-image: url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 44 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='22' cy='22' r='22' fill='%23343434'/%3E%3Cpath d='M14.2217 29.7782L29.778 14.2218' stroke='white'/%3E%3Cpath d='M29.7778 29.7782L14.2215 14.2219' stroke='white'/%3E%3C/svg%3E%0A");
+}
+
+.service-centers_address_item_form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.service-centers_address_item_form_label-wrapper {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 0 0 10px 10px;
+    background: #F9F9F9;
+    padding: 0 13px 13px 13px;
+    margin-bottom: 30px;
+}
+
+.service-centers_address_item_form_label-wrapper.active {
+    display: grid;
+}
+
+.service-centers_address_item_form_label-wrapper a {
+    color: #8C8C8C;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    text-decoration-line: underline;
+}
+
+.service-centers_address_item_form_btn-submit {
+    white-space: nowrap;
+    display: flex;
+    width: max-content;
+    height: 60px;
+    padding: 15px 37px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid var(--core-color);
+    background: unset;
+    cursor: pointer;
+
+    font-size: clamp(14px, 1.15vw, 16px);
+}
+
+.service-centers_btn-show-more {
+    display: inline-flex;
+    padding: 18px 22px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    color: #FFF;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+
+.service-page_services {
+    margin-top: 40px;
+    padding-bottom: 41px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.service-page_services_header {
+    max-width: 875px;
+}
+
+.service-page_services_header span {
+    color: #CCC;
+}
+
+
+.service-page_services .services_item {
+    display: flex;
+}
+
+
+.breadcrumb {
+    margin-top: 40px;
+}
+
+.breadcrumb ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.breadcrumb_home {
+    color: var(--core-color);
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.breadcrumb_line {
+    padding-left: 10px;
+    padding-right: 16px;
+    content: '/';
+    color: var(--core-color);
+}
+
+.breadcrumb_item {
+    color: var(--core-color);
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.breadcrumb  li:last-child .breadcrumb_item {
+    color: #A2A2A2;
+}
+
+
+.our-works {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.our-works_header {
+    max-width: 796px;
+}
+
+.our-works_content {
+    display: flex;
+    gap: 24px;
+}
+
+.our-works_item {
+    position: relative;
+    padding: 20px;
+    width: 196px;
+    min-width: 196px;
+    min-height: 258px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: normal;
+}
+
+.our-works_item span {
+    color: #6D6D6D;
+    font-size: 34px;
+    line-height: 40px;
+}
+
+.our-works_item_background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.our-works_title {
+    color: #969696;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.our-works_select-car-service {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    background: #F7F7F7;
+}
+
+.our-works_select-car-service span {
+    color: #ABABAB;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.our-works_select-car-service:after {
+    position: absolute;
+    display: block;
+    content: '';
+    border: 20px solid transparent;
+    border-right: 20px solid white;
+    border-bottom: 20px solid white;
+    right: 0;
+    bottom: 0;
+}
+
+.our-works_select-car-service_text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.our-works_select-car-service_title {
+    font-size: 34px;
+    line-height: 44px;
+    text-transform: uppercase;
+}
+
+.our-works_select-car-service_btn {
+    margin-top: 34px;
+    display: flex;
+    width: max-content;
+    height: 50px;
+    padding: 13px 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: #FFDB5B;
+
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.our-works_select-car-service_btn span {
+    color: var(--core-color);
+}
+
+.our-works_select-car-service_img {
+    width: 166px;
+    height: 218px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.our-works_select-car-service_img:nth-child(2) {
+    display: none;
+}
+
+
+.prices {
+    margin-top: 99px;
+    padding-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.prices_header {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.prices_header span {
+    max-width: 349px;
+
+    color: #ABABAB;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.prices_content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.prices_item {
+    position: relative;
+    padding: 20px;
+    min-height: 236px;
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+            'A A B'
+            'C C C';
+}
+
+.prices_item:hover {
+    background: #F9F9F9;
+}
+
+.prices_item:hover:after {
+    position: absolute;
+    display: block;
+    content: '';
+    border: 20px solid transparent;
+    border-right: 20px solid white;
+    border-bottom: 20px solid white;
+    right: 0;
+    bottom: 0;
+}
+
+.prices_item:hover .prices_item-background {
+    display: none;
+}
+
+.prices_item:hover .prices_item_btn {
+    background: #FFDB5B;
+    border: none;
+}
+
+.prices_item-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: fill;
+}
+
+.prices_item-background:nth-child(2) {
+    display: none;
+}
+
+.prices_item_title span {
+    color: var(--core-color);
+    font-family: "Bicubik Regular", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+
+.prices_item_title {
+    grid-area: A;
+    max-width: 891px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.prices_item_price {
+    grid-area: B;
+    white-space: nowrap;
+
+    color: #ABABAB;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 38px;
+    text-transform: uppercase;
+}
+
+.prices_item_price span {
+    color: var(--core-color);
+}
+
+.prices_item_btn {
+    grid-area: C;
+    margin-top: 22px;
+    display: flex;
+    width: max-content;
+    height: 50px;
+    padding: 13px 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--core-color);
+    background: unset;
+    cursor: pointer;
+
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+.our-principles {
+    margin-top: 128px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.our-principles_header {
+    color: #ABABAB;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.our-principles_content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(415px, 1fr));
+    gap: 31px;
+}
+
+.our-principles_item {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-bottom: 30px;
+    border-bottom: solid 1px #CACACA;
+}
+
+.our-principles_item_title {
+    max-width: 428px;
+
+    color: var(--core-color);
+    font-size: 34px;
+    line-height: 50px;
+}
+
+.our-principles_item_text {
+    font-family: Montserrat;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+
+.our-big-team {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.our-big-team_content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.our-big-team_item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.our-big-team_item_img {
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.our-big-team_item_name {
+    margin-top: 14px;
+
+    font-size: 24px;
+    line-height: 34px;
+}
+
+.our-big-team_item_text {
+    display: flex;
+    flex-direction: column;
+
+    color: #B9B9B9;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.our-big-team_item_text span {
+    color: var(--core-color);
+}
+
+.our-big-team_content_mobil {
+    display: none;
+}
+
+
+.our-centers {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+}
+
+.our-centers_header span {
+    color: #CCC;
+}
+
+.our-centers_content {
+    display: grid;
+    grid-template-areas:
+            'A A A A A B C'
+            'D D D E E E E';
+    gap: 24px;
+}
+
+.our-centers_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.our-centers_img:nth-child(1) {
+    grid-area: A;
+}  .our-centers_img:nth-child(2) {
+        grid-area: B;
+    }  .our-centers_img:nth-child(3) {
+            grid-area: C;
+        }  .our-centers_img:nth-child(4) {
+                grid-area: D;
+            }  .our-centers_img:nth-child(5) {
+                    grid-area: E;
+                }
+
+
+.feedback {
+    margin-top: 120px;
+}
+
+.feedback_container {
+    border-radius: 20px;
+    background: #FFDB5B;
+    padding: 20px;
+    display: grid;
+    grid-template-areas:
+            'A C'
+            'B C';
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: normal;
+    gap: 20px;
+}
+
+.feedback_header {
+    grid-area: A;
+    max-width: 488px;
+}
+
+.feedback_img {
+    grid-area: B;
+    max-width: 381px;
+    width: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+.feedback_form-wrapper {
+    grid-area: C;
+    display: flex;
+    flex-direction: column;
+    justify-self: right;
+    gap: 16px;
+    max-width: 506px;
+    width: 100%;
+}
+
+.feedback_form-wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feedback_label {
+    width: 100%;
+}
+
+.feedback_label input,
+.feedback_label textarea {
+    width: 100%;
+    padding: 28px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #FFDB5B;
+
+    color: #4B4B4B;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.feedback_label textarea {
+    height: 201px;
+    resize: none;
+}
+
+.feedback_btn-submit {
+    width: max-content;
+    margin-top: 14px;
+    display: flex;
+    height: 60px;
+    padding: 15px 37px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #FFF;
+    border: none;
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+.feedback_policy {
+    max-width: 364px;
+
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.feedback_policy a {
+    color: var(--core-color);
+    text-decoration-line: underline;
+}
+
+
+.contacts {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+}
+
+.contacts_header {
+}
+
+.contacts_content {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.contacts_form {
+    max-width: 526px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    border-radius: 20px;
+    border: 1px solid var(--core-color);
+    padding: 30px;
+}
+
+
+.contacts_form_item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    color: var(--core-color);
+    font-size: 18px;
+}
+
+.contacts_form_item_label {
+
+}
+
+.contacts_form_item_input {
+    position: relative;
+    padding: 19px 21px;
+    border-radius: 10px;
+    background: #F4F4F4;
+    cursor: pointer;
+
+    color: #ABABAB;
+    font-family: Montserrat;
+}
+
+.contacts_form_item_input:after {
+    position: absolute;
+    top: 26px;
+    right: 26px;
+    display: block;
+    content: '';
+    width: 17px;
+    height: 9px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='10' viewBox='0 0 18 10' fill='none'%3E%3Cpath d='M1 1L9 9L17 1' stroke='%23343434'/%3E%3C/svg%3E");
+}
+
+.contacts_form_item_input.active {
+    color: var(--core-color);
+    font-weight: 500;
+}
+
+.contacts_form_select_label-wrapper {
+    display: none;
+    position: absolute;
+    background: white;
+    width: 100%;
+    padding: 20px 10px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 36px 0 rgba(0, 0, 0, 0.22);
+    z-index: 9;
+    top: 108%;
+}
+
+.contacts_form_select_label-wrapper.active {
+    display: block;
+}
+
+.contacts_form_select_label-wrapper div {
+    overflow-y: auto;
+    max-height: 350px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contacts_form_select_label {
+    position: relative;
+}
+
+.contacts_form_select_label input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    margin: 0;
+}
+
+.contacts_form_input_label {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    color: var(--core-color);
+    font-size: 18px;
+}
+
+.contacts_form_input_label input {
+    padding: 19px 21px;
+    border-radius: 10px;
+    background: #F4F4F4;
+    border: none;
+    outline: none;
+
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contacts_form_select_label {
+
+}
+
+.contacts_form_input_label {
+}
+
+.contacts_form_btn-submit {
+    max-width: 450px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 19px 14px;
+    border-radius: 10px;
+
+    color: #FFF;
+    font-size: clamp(12px, 2vw, 18px);
+}
+
+.contacts_map-wrapper {
+    max-width: 746px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.contacts_map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+}
 
 
 
@@ -1079,6 +2035,7 @@ button {
 }
 
 .footer_logo-wrapper {
+    width: max-content;
     display: flex;
     flex-direction: column;
     gap: 7px;
@@ -1300,8 +2257,29 @@ button {
         display: none;
     }
 
-    .header_tel {
-        /*display: none;*/
+
+    .breadcrumb {
+        margin-top: 32px;
+    }
+
+}
+
+@media (max-width: 1020px) {
+
+    .our-works_content {
+        flex-wrap: wrap;
+    }
+
+    .our-works_select-car-service {
+        order: 1;
+    }
+
+    .our-works_item:nth-child(1) {
+        order: 2;
+    }
+
+    .our-works_item:nth-child(2) {
+        order: 3;
     }
 }
 
@@ -1349,6 +2327,22 @@ button {
         max-width: 100%;
         max-height: 570px;
     }
+
+
+    .contacts_content {
+        flex-wrap: wrap;
+    }
+
+    .contacts_form {
+        max-width: 100%;
+    }
+
+    .contacts_map-wrapper {
+        max-width: 100%;
+        min-height: 519px;
+    }
+
+
 
 
 
@@ -1424,6 +2418,142 @@ button {
     .questions_items-wrapper {
         min-width: 100%;
     }
+
+
+    .service-centers_city-btn-wrapper button {
+        font-size: 14px;
+        line-height: 140%;
+    }
+
+    .service-centers_address_item_address {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .service-centers_address_item_tel {
+        font-size: 18px;
+    }
+
+    .service-centers_address_item_working-hours span {
+        font-size: 14px;
+    }
+
+    .service-centers_address_item_form_label-wrapper span {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .service-centers_address_item_form_btn-submit {
+        font-size: 12px;
+    }
+
+    .service-centers_btn-show-more {
+        font-size: 14px;
+    }
+
+
+    .our-works_content {
+        gap: 10px;
+    }
+
+    .our-works_select-car-service {
+        flex-direction: column-reverse;
+    }
+
+    .our-works_select-car-service_img:nth-child(3) {
+        display: none;
+    }
+
+    .our-works_select-car-service_img:nth-child(2) {
+        display: block;
+        width: 100%;
+    }
+
+    .our-works_item {
+        max-width: 155px;
+        min-width: unset;
+        height: 176px;
+    }
+
+
+    .prices_item {
+        grid-template-areas:
+        'A A'
+        'B B'
+        'C C';
+    }
+
+
+    .our-big-team_content {
+        display: none;
+    }
+
+    .our-big-team_content_mobil {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .our-big-team_swiper {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    .our-big-team_item_img {
+        min-height: 410px;
+    }
+
+    .our-big-team_btn-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 22px;
+    }
+
+    .our-big-team_swiper-button-prev,
+    .our-big-team_swiper-button-next {
+        display: block;
+        content: '';
+        width: 80px;
+        height: 52px;
+        cursor: pointer;
+    }
+
+    .our-big-team_swiper-button-prev {
+        background-image: url("data:image/svg+xml,%3Csvg width='80' height='52' viewBox='0 0 80 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M79.6484 6C79.6484 2.88047 77.1195 0.35159 74 0.35159H6C2.88046 0.35159 0.351593 2.88047 0.351593 6V39.2544C0.351593 40.835 1.01385 42.3433 2.17752 43.4129L9.51616 50.1585C10.5586 51.1167 11.9228 51.6484 13.3386 51.6484L74 51.6484C77.1195 51.6484 79.6484 49.1195 79.6484 46V6Z' stroke='%23343434' stroke-width='0.70318'/%3E%3Cpath d='M20.6464 26.3536C20.4512 26.1583 20.4512 25.8417 20.6464 25.6464L23.8284 22.4645C24.0237 22.2692 24.3403 22.2692 24.5355 22.4645C24.7308 22.6597 24.7308 22.9763 24.5355 23.1716L21.7071 26L24.5355 28.8284C24.7308 29.0237 24.7308 29.3403 24.5355 29.5355C24.3403 29.7308 24.0237 29.7308 23.8284 29.5355L20.6464 26.3536ZM59 26.5H21V25.5H59V26.5Z' fill='%23343434'/%3E%3C/svg%3E%0A");
+    }
+
+    .our-big-team_swiper-button-next {
+        background-image: url("data:image/svg+xml,%3Csvg width='80' height='52' viewBox='0 0 80 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.35159 6C0.35159 2.88047 2.88047 0.35159 6 0.35159H74C77.1195 0.35159 79.6484 2.88047 79.6484 6V39.2544C79.6484 40.835 78.9862 42.3433 77.8225 43.4129L70.4838 50.1585C69.4414 51.1167 68.0772 51.6484 66.6614 51.6484L6 51.6484C2.88047 51.6484 0.35159 49.1195 0.35159 46V6Z' stroke='%23343434' stroke-width='0.70318'/%3E%3Cpath d='M59.3536 26.3536C59.5488 26.1583 59.5488 25.8417 59.3536 25.6464L56.1716 22.4645C55.9763 22.2692 55.6597 22.2692 55.4645 22.4645C55.2692 22.6597 55.2692 22.9763 55.4645 23.1716L58.2929 26L55.4645 28.8284C55.2692 29.0237 55.2692 29.3403 55.4645 29.5355C55.6597 29.7308 55.9763 29.7308 56.1716 29.5355L59.3536 26.3536ZM21 26.5H59V25.5H21V26.5Z' fill='%23343434'/%3E%3C/svg%3E%0A");
+    }
+
+
+    .our-centers_content {
+        grid-template-areas:
+            'A A C'
+            'A A E'
+            'B D D'
+            'B D D';
+        grid-template-rows: 235px 235px 235px 235px;
+    }
+
+
+    .feedback_container {
+        grid-template-areas:
+            'A A'
+            'C C'
+            'B B';
+    }
+
+    .feedback_form-wrapper {
+        max-width: 100%;
+        justify-self: left;
+    }
+
+    .feedback_img {
+        max-width: 100%;
+    }
+
 
 }
 
@@ -1857,6 +2987,414 @@ button {
     }
 
 
+    .service-centers {
+        margin-top: 60px;
+        gap: 30px;
+    }
+
+    .service-centers_content {
+    }
+
+    .service-centers_city-btn-wrapper {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .service-centers_city-btn-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .service-centers_address-wrapper {
+        margin-top: 0;
+    }
+
+    .service-centers_address {
+        gap: 20px;
+    }
+
+    .service-centers_address_item {
+        max-width: 320px;
+        gap: 30px;
+    }
+
+    .service-centers_address_item-background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .service-centers_address_item_head {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .service-centers_address_item_tel:before {
+        width: 44px;
+        height: 44px;
+        background-image: url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 58 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='29' cy='29' r='29' fill='%23F9F9F9'/%3E%3Cpath d='M27.8132 30.1858C29.3401 31.7115 31.1092 33.1716 31.8085 32.4724C32.8088 31.4723 33.4262 30.6005 35.6331 32.374C37.8392 34.1466 36.1444 35.3289 35.175 36.2972C34.056 37.4159 29.8851 36.357 25.7625 32.2361C21.6408 28.1143 20.5846 23.9442 21.7044 22.8255C22.6739 21.8553 23.8507 20.1619 25.6236 22.3674C27.3975 24.573 26.5264 25.1902 25.5242 26.1913C24.8278 26.8905 26.2872 28.6592 27.8132 30.1858Z' fill='%23343434'/%3E%3C/svg%3E%0A");
+    }
+
+    .service-centers_address_item_tel {
+        gap: 6px;
+    }
+
+    .service-centers_address_item_working-hours {
+        gap: 4px;
+    }
+
+    .service-centers_address_item_btn-open-form {
+        margin-bottom: 22px;
+
+        padding: 8px;
+
+    }
+
+    .service-centers_address_item_btn-open-form.active {
+        border-radius: 10px 10px 0 0;
+        margin-bottom: 0;
+    }
+
+    .service-centers_address_item_btn-open-form:after {
+        max-width: 36px;
+        height: 36px;
+        background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 44 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='22' cy='22' r='22' fill='%23FFDB5B'/%3E%3Cpath d='M11 22H33' stroke='%23343434'/%3E%3Cpath d='M22 33L22 11' stroke='%23343434'/%3E%3C/svg%3E%0A");
+    }
+
+    .service-centers_address_item_btn-open-form.active:after {
+        background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 44 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='22' cy='22' r='22' fill='%23343434'/%3E%3Cpath d='M14.2217 29.7782L29.778 14.2218' stroke='white'/%3E%3Cpath d='M29.7778 29.7782L14.2215 14.2219' stroke='white'/%3E%3C/svg%3E%0A");
+    }
+
+    .service-centers_address_item_form {
+        gap: 22px;
+    }
+
+    .service-centers_address_item_form_label-wrapper {
+        padding: 0 8px 8px 8px;
+    }
+
+    .service-centers_address_item_form_btn-submit {
+        height: 50px;
+        padding: 15px;
+    }
+
+    .service-centers_btn-show-more {
+        padding: 13px 18px;
+        border-radius: 6px;
+    }
+
+
+    .breadcrumb {
+        margin-top: 24px;
+    }
+
+    .breadcrumb ul {
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+
+    .breadcrumb_home {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .breadcrumb ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    .breadcrumb_line {
+        padding-left: 8px;
+        padding-right: 12px;
+    }
+
+    .breadcrumb_item {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+
+    .service-page_services {
+        padding-bottom: 0;
+        gap: 40px;
+    }
+
+    .service-page_services_header {
+        font-size: 32px;
+        line-height: 44px;
+    }
+
+
+    .our-works {
+        margin-top: 30px;
+        gap: 20px;
+    }
+
+    .our-works_header {
+        max-width: 796px;
+    }
+
+    .our-works_item {
+        min-height: 176px;
+    }
+
+    .our-works_item span {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .our-works_title {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .our-works_select-car-service span {
+        color: #ABABAB;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .our-works_select-car-service_text-wrapper {
+        gap: 10px;
+    }
+
+    .our-works_select-car-service_title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .our-works_select-car-service_btn {
+        margin-top: 20px;
+    }
+
+    .our-works_select-car-service_btn span {
+        display: none;
+    }
+
+    .our-works_select-car-service_img:nth-child(2) {
+        width: 320px;
+        height: 150px;
+        margin: -20px -20px 0 -20px;
+    }
+
+
+    .prices {
+        margin-top: 60px;
+        padding-bottom: 0;
+        gap: 20px;
+    }
+
+    .prices_header {
+        gap: 20px;
+    }
+
+    .prices_header span {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .prices_item-background:nth-child(1) {
+        display: none;
+    }
+
+    .prices_item-background:nth-child(2) {
+        display: block;
+    }
+
+    .prices_item_title span {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .prices_item_title {
+        gap: 14px;
+
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+
+    .prices_item_price {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .prices_item_btn {
+        margin-top: 20px;
+        height: 50px;
+        padding: 13px 37px;
+
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+
+    .our-principles {
+        margin-top: 60px;
+        gap: 16px;
+    }
+
+    .our-principles_header {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .our-principles_content {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 30px;
+    }
+
+    .our-principles_item {
+        gap: 18px;
+        padding-bottom: 20px;
+    }
+
+    .our-principles_item_title {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .our-principles_item_text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+
+    .our-big-team_swiper {
+        overflow: unset;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .our-centers {
+        margin-top: 60px;
+        gap: 30px;
+    }
+
+    .our-centers_content {
+        gap: 10px;
+        grid-template-rows: 135px 135px 135px 135px;
+    }
+
+    .our-centers_header {
+        font-size: 32px;
+    }
+
+    .our-centers_header span {
+        color: var(--core-color);
+    }
+
+
+    .feedback {
+        margin-top: 60px;
+    }
+
+    .feedback_container {
+        gap: 21px;
+    }
+
+    .feedback_form-wrapper {
+        gap: 21px;
+    }
+
+    .feedback_form-wrapper form {
+        gap: 14px;
+    }
+
+    .feedback_label input,
+    .feedback_label textarea {
+        font-size: 12px;
+    }
+
+    .feedback_label textarea {
+        height: 108px;
+    }
+
+    .feedback_btn-submit {
+        width: 100%;
+        margin-top: 10px;
+        height: 50px;
+
+        font-size: 14px;
+    }
+
+    .feedback_policy {
+        display: none;
+    }
+
+
+    .contacts {
+        margin-top: 30px;
+        gap: 40px;
+    }
+
+    .contacts_content {
+        gap: 20px;
+    }
+
+    .contacts_form {
+        gap: 24px;
+        padding: 28px 20px;
+    }
+
+    .contacts_form_input_label {
+        gap: 14px;
+
+        font-size: 14px;
+    }
+
+    .contacts_form_item {
+        gap: 14px;
+
+        font-size: 12px;
+    }
+
+    .contacts_form_item_input:after {
+        top: 22px;
+        right: 16px;
+        width: 13px;
+        height: 7px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8' fill='none'%3E%3Cpath d='M1 1L7 7L13 1' stroke='%23343434'/%3E%3C/svg%3E");
+    }
+
+    .contacts_form_select_label-wrapper div {
+        max-height: 250px;
+        gap: 24px;
+    }
+
+    .contacts_form_input_label input {
+        padding: 17px;
+
+        font-size: 12px;
+    }
+
+    .contacts_form_select_label {
+
+    }
+
+    .contacts_form_input_label {
+    }
+
+    .contacts_form_btn-submit {
+        margin-top: 8px;
+        height: 50px;
+        padding: 19px 14px;
+        border-radius: 10px;
+        white-space: nowrap;
+    }
+
+
+
+
+
+
+
 
 
 
@@ -1992,5 +3530,10 @@ button {
         width: 80px;
         height: 80px;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='80' height='80' viewBox='0 0 80 80'%3E%3Cimage id='Слой_1' data-name='Слой 1' width='80' height='80' xlink:href='data:img/png;base64,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'/%3E%3C/svg%3E%0A");
+    }
+
+
+    .service-centers_address_item_form_label-wrapper a:hover {
+        color: var(--core-color);
     }
 }
