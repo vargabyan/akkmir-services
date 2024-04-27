@@ -339,8 +339,8 @@ $response_data_service_centers = [
                                     <span>показать на карте</span>
                                 </p>
                                 <a class="service-centers_address_item_tel" href="tel:+7343261-62-62"><?= $contact['tel'] ?></a>
+                                <p class="service-centers_address_item_working-hours"><span>Время работы</span>с 10:00 до 19:00 <br> без выходных</p>
                             </div>
-                            <p class="service-centers_address_item_working-hours"><span>Время работы</span>с 10:00 до 19:00 <br> без выходных</p>
                             <div class="service-centers_address_item_form-wrapper">
                                 <button class="service-centers_address_item_btn-open-form" data-service-centers-address-item-btn-open-form>Список оказываемых услуг в данном автосервисе</button>
                                 <div class="service-centers_address_item_form_label-wrapper" data-service-centers-address-item-form-label-wrapper>

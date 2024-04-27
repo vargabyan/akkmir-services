@@ -35,7 +35,7 @@ new Swiper('.our-big-team_swiper', {
     },
     breakpoints: {
         320: {
-            slidesPerView: 1.3,
+            slidesPerView: 1.36,
             spaceBetween: 20,
             slideToClickedSlide: true,
         },

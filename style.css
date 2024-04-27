@@ -1165,6 +1165,10 @@ button {
     font-size: 24px;
 }
 
+.service-centers_address_item_tel:hover:before {
+    background-image: url("data:image/svg+xml,%3Csvg width='58' height='58' viewBox='0 0 58 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='29' cy='29' r='29' fill='%23FFDB5B'/%3E%3Cpath d='M27.8132 30.1857C29.3401 31.7114 31.1092 33.1715 31.8085 32.4723C32.8088 31.4722 33.4262 30.6004 35.6331 32.3739C37.8392 34.1465 36.1444 35.3289 35.175 36.2971C34.056 37.4158 29.8851 36.3569 25.7625 32.236C21.6408 28.1142 20.5846 23.9442 21.7044 22.8255C22.6739 21.8553 23.8507 20.1618 25.6236 22.3674C27.3975 24.5729 26.5264 25.1902 25.5242 26.1912C24.8278 26.8904 26.2872 28.6591 27.8132 30.1857Z' fill='%23343434'/%3E%3C/svg%3E%0A");
+}
+
 .service-centers_address_item_working-hours {
     display: flex;
     flex-direction: column;
@@ -3041,11 +3045,23 @@ button {
         background-image: url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 58 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='29' cy='29' r='29' fill='%23F9F9F9'/%3E%3Cpath d='M27.8132 30.1858C29.3401 31.7115 31.1092 33.1716 31.8085 32.4724C32.8088 31.4723 33.4262 30.6005 35.6331 32.374C37.8392 34.1466 36.1444 35.3289 35.175 36.2972C34.056 37.4159 29.8851 36.357 25.7625 32.2361C21.6408 28.1143 20.5846 23.9442 21.7044 22.8255C22.6739 21.8553 23.8507 20.1619 25.6236 22.3674C27.3975 24.573 26.5264 25.1902 25.5242 26.1913C24.8278 26.8905 26.2872 28.6592 27.8132 30.1858Z' fill='%23343434'/%3E%3C/svg%3E%0A");
     }
 
+    .service-centers_address_item_tel:hover:before {
+        width: 44px;
+        height: 44px;
+        background-image: url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 58 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='29' cy='29' r='29' fill='%23FFDB5B'/%3E%3Cpath d='M27.8132 30.1857C29.3401 31.7114 31.1092 33.1715 31.8085 32.4723C32.8088 31.4722 33.4262 30.6004 35.6331 32.3739C37.8392 34.1465 36.1444 35.3289 35.175 36.2971C34.056 37.4158 29.8851 36.3569 25.7625 32.236C21.6408 28.1142 20.5846 23.9442 21.7044 22.8255C22.6739 21.8553 23.8507 20.1618 25.6236 22.3674C27.3975 24.5729 26.5264 25.1902 25.5242 26.1912C24.8278 26.8904 26.2872 28.6591 27.8132 30.1857Z' fill='%23343434'/%3E%3C/svg%3E%0A");
+    }
+
+    .service-centers_address_item_address {
+        order: 1;
+    }
+
     .service-centers_address_item_tel {
+        order: 3;
         gap: 6px;
     }
 
     .service-centers_address_item_working-hours {
+        order: 2;
         gap: 4px;
     }
 
@@ -3266,9 +3282,9 @@ button {
 
 
     .our-big-team_swiper {
-        overflow: unset;
-        width: 100%;
+        overflow: hidden;
         height: 100%;
+        width: 340px;
     }
 
 
