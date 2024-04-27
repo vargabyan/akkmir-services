@@ -304,33 +304,33 @@ $response_data_service_centers = [
                     <div class="service-centers_address active" data-service-centers-city-address-id="<?= $item['id'] ?>">
                         <?php foreach ($item['contacts'] as $contact) { ?>
                             <div class="service-centers_address_item" data-service-centers-address-item>
-                            <img class="service-centers_address_item-background" src="/images/Vector 355.png" alt="img" data-service-centers-address-item-background>
-                            <img class="service-centers_address_item-background active" src="/images/Vector 356.png" alt="img" data-service-centers-address-item-background>
-                            <div class="service-centers_address_item_head">
-                                <p class="service-centers_address_item_address">
-                                    <span>екатеринбург</span>
-                                    <?= $contact['address'] ?>
-                                    <span>показать на карте</span>
-                                </p>
-                                <a class="service-centers_address_item_tel" href="tel:+7343261-62-62"><?= $contact['tel'] ?></a>
-                            </div>
-                            <p class="service-centers_address_item_working-hours"><span>Время работы</span>с 10:00 до 19:00 <br> без выходных</p>
-                            <div class="service-centers_address_item_form-wrapper">
-                                <button class="service-centers_address_item_btn-open-form" data-service-centers-address-item-btn-open-form>Список оказываемых услуг в данном автосервисе</button>
-                                <div class="service-centers_address_item_form_label-wrapper" data-service-centers-address-item-form-label-wrapper>
-                                    <a href="">Ремонт ходовой части</a>
-                                    <a href="">Услуги диагноста-автоэлектрика</a>
-                                    <a href="">Ремонт тормозной системы</a>
-                                    <a href="">Шиномонтаж</a>
-                                    <a href="">Ремонт рулевого управления</a>
-                                    <a href="">Зарядка и обслуживание аккумуляторов</a>
-                                    <a href="">Работы по техническому обслуживанию</a>
-                                    <a href="">Ремонт стартеров и генераторов</a>
-                                    <a href="">Регулировка углов установки колёс</a>
+                                <img class="service-centers_address_item-background" src="/images/Vector 355.png" alt="img" data-service-centers-address-item-background>
+                                <img class="service-centers_address_item-background active" src="/images/Vector 356.png" alt="img" data-service-centers-address-item-background>
+                                <div class="service-centers_address_item_head">
+                                    <p class="service-centers_address_item_address">
+                                        <span>екатеринбург</span>
+                                        <?= $contact['address'] ?>
+                                        <span>показать на карте</span>
+                                    </p>
+                                    <a class="service-centers_address_item_tel" href="tel:+7343261-62-62"><?= $contact['tel'] ?></a>
+                                    <p class="service-centers_address_item_working-hours"><span>Время работы</span>с 10:00 до 19:00 <br> без выходных</p>
                                 </div>
-                                <button class="service-centers_address_item_form_btn-submit">Выбрать услугу и записаться</button>
+                                <div class="service-centers_address_item_form-wrapper">
+                                    <button class="service-centers_address_item_btn-open-form" data-service-centers-address-item-btn-open-form>Список оказываемых услуг в данном автосервисе</button>
+                                    <div class="service-centers_address_item_form_label-wrapper" data-service-centers-address-item-form-label-wrapper>
+                                        <a href="">Ремонт ходовой части</a>
+                                        <a href="">Услуги диагноста-автоэлектрика</a>
+                                        <a href="">Ремонт тормозной системы</a>
+                                        <a href="">Шиномонтаж</a>
+                                        <a href="">Ремонт рулевого управления</a>
+                                        <a href="">Зарядка и обслуживание аккумуляторов</a>
+                                        <a href="">Работы по техническому обслуживанию</a>
+                                        <a href="">Ремонт стартеров и генераторов</a>
+                                        <a href="">Регулировка углов установки колёс</a>
+                                    </div>
+                                    <button class="service-centers_address_item_form_btn-submit">Выбрать услугу и записаться</button>
+                                </div>
                             </div>
-                        </div>
                         <?php } ?>
                     </div>
                 <?php } else { ?>
