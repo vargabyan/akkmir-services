@@ -28,9 +28,9 @@
     </form>
     <nav class="header_nav">
         <ul>
-            <li><a href="/services">Услуги автосервиса</a></li>
-            <li><a href="/about-company">о компании</a></li>
-            <li><a href="/contacts">Контакты</a></li>
+            <li><a href="/services.php">Услуги автосервиса</a></li>
+            <li><a href="/about-company.php">о компании</a></li>
+            <li><a href="/contacts.php">Контакты</a></li>
         </ul>
     </nav>
     <a class="header_tel" href="tel:+7343261-62-62">

@@ -471,6 +471,12 @@ button {
 }
 
 .sale_item_link {
+    border: none;
+    padding: 0;
+    background-color: unset;
+    cursor: pointer;
+    width: max-content;
+    z-index: 1;
     color: var(--core-color);
 
     font-size: 14px;
@@ -1889,6 +1895,10 @@ button {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='10' viewBox='0 0 18 10' fill='none'%3E%3Cpath d='M1 1L9 9L17 1' stroke='%23343434'/%3E%3C/svg%3E");
 }
 
+.contacts_form_item_input.rotate:after {
+    transform: rotate(180deg);
+}
+
 .contacts_form_item_input.active {
     color: var(--core-color);
     font-weight: 500;
@@ -1984,6 +1994,259 @@ button {
     width: 100%;
     height: 100%;
 }
+
+
+.modal-wrapper {
+    display: none;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.31);
+    z-index: 9;
+}
+
+.modal-wrapper.active {
+    display: flex;
+}
+
+.modal_content {
+    width: 100%;
+    height: max-content;
+    position: relative;
+    display: none;
+    gap: 35px;
+    flex-direction: column;
+    max-width: 932px;
+    border-radius: 20px;
+    padding: 40px;
+    background: #FFF;
+    margin: auto;
+}
+
+.modal_content.active {
+    display: flex;
+}
+
+.modal_btn-close {
+    position: absolute;
+    border: none;
+    background-color: unset;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='34' viewBox='0 0 35 34' fill='none'%3E%3Cpath d='M1.5 1L33.5 33' stroke='%23ABABAB' stroke-width='2'/%3E%3Cpath d='M33.5 1L1.5 33' stroke='%23ABABAB' stroke-width='2'/%3E%3C/svg%3E");
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+}
+
+.modal_title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 615px;
+
+    font-size: 34px;
+    line-height: 48px;
+}
+
+.modal_title span {
+    color: #ABABAB;
+
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.modal_form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.modal_form_label-core {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modal_form_label-core textarea,
+.modal_form_label-core input {
+    height: 60px;
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid #ABABAB;
+    outline: none;
+
+    font-family: Montserrat;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.modal_form_label-core textarea {
+    height: 163px;
+}
+
+.modal_footer {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.modal_btn-submit {
+    width: max-content;
+    padding: 19px 50px;
+    border-radius: 10px;
+
+    font-size: 18px;
+    line-height: 120%;
+}
+
+.modal_subtitle {
+    max-width: 363px;
+    color: #ABABAB;
+
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0;
+}
+
+.modal_subtitle a {
+    color: #ABABAB;
+
+    text-decoration-line: underline;
+}
+
+
+.modal_content_success {
+    width: 100%;
+    height: max-content;
+    position: relative;
+    display: none;
+    flex-direction: column;
+    max-width: 932px;
+    border-radius: 20px;
+    padding: 40px;
+    background: #FFF;
+    margin: auto;
+    align-items: center;
+    gap: 64px;
+}
+
+.modal_content_success.active {
+    display: flex;
+}
+
+.modal_content_success .modal_title {
+    text-align: center;
+    align-self: center;
+}
+
+.modal_content_success .modal_title span {
+    color: var(--core-color);
+    font-family: Montserrat;
+    font-size: 24px;
+    line-height: 26px
+}
+
+.modal_content_success_icon {
+    display: block;
+    width: 164px;
+    height: 164px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='164' height='164' viewBox='0 0 164 164' fill='none'%3E%3Ccircle cx='82' cy='82' r='82' fill='%23FFDB5B'/%3E%3Cpath d='M55 81.4062L74.3085 101L110 63' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+[data-modal-request-a-call-content-success] .modal_content,
+[data-modal-request-a-call-content] .modal_content {
+    max-width: 710px;
+}
+
+
+.modal-for-sale-swiper_content {
+    position: relative;
+    display: none;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 60px;
+    max-width: 1176px;
+    width: 100%;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0 0 44px 0 rgba(0, 0, 0, 0.18);
+    margin: auto;
+}
+
+.modal-for-sale-swiper_content.active {
+    display: flex;
+}
+
+.modal-for-sale-swiper_text-wrapper {
+    max-width: 628px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.modal-for-sale-swiper_discount {
+    display: none;
+    width: max-content;
+    height: 39px;
+    padding: 2px 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background: var(--core-color);
+
+    color: #FFF;
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.modal-for-sale-swiper_discount.active {
+    display: flex;
+}
+
+.modal-for-sale-swiper_title {
+    margin-top: 2px;
+    font-size: 34px;
+    line-height: 38px;
+    text-transform: uppercase;
+}
+
+.modal-for-sale-swiper_text {
+    font-family: Montserrat;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.modal-for-sale-swiper_btn-appointment {
+    margin-top: 42px;
+    padding: 13px 38px;
+    border-radius: 8px;
+    width: max-content;
+
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.modal-for-sale-swiper_img {
+    max-width: 388px;
+    width: 100%;
+    max-height: 417px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+
+
+
+
 
 
 
@@ -2181,7 +2444,7 @@ button {
     gap: 17px;
 }
 
-.footer_services-wrapper p {
+.footer_services-wrapper li:first-child a {
     color: #ABABAB;
 
     font-size: 18px;
@@ -2266,6 +2529,11 @@ button {
         margin-top: 32px;
     }
 
+
+    .modal-wrapper {
+        padding: 29px 20px 20px 20px;
+    }
+
 }
 
 @media (max-width: 1020px) {
@@ -2344,6 +2612,19 @@ button {
     .contacts_map-wrapper {
         max-width: 100%;
         min-height: 519px;
+    }
+
+
+    .modal-for-sale-swiper_content {
+        flex-direction: column-reverse;
+    }
+
+    .modal-for-sale-swiper_text-wrapper {
+        max-width: 100%;
+    }
+
+    .modal-for-sale-swiper_img {
+        max-width: 100%;
     }
 
 
@@ -2558,6 +2839,22 @@ button {
         max-width: 100%;
     }
 
+
+    .modal_title {
+        font-size: clamp(18px, 4.5vw, 34px);
+    }
+
+    .modal_title span {
+        font-size: clamp(12px, 4.5vw, 18px);
+    }
+
+    .modal_form_label-core input {
+        font-size: clamp(14px, 4.5vw, 18px);
+    }
+
+    .modal_btn-submit {
+        font-size: clamp(14px, 4.5vw, 18px);
+    }
 
 }
 
@@ -3406,6 +3703,152 @@ button {
     }
 
 
+    .modal_content {
+        gap: 24px;
+        padding: 20px;
+        box-shadow: 0 0 36px 0 rgba(0, 0, 0, 0.22);
+    }
+
+    .modal_btn-close {
+        width: 18px;
+        height: 18px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 35 34' fill='none'%3E%3Cpath d='M1.5 1L33.5 33' stroke='%23ABABAB' stroke-width='2'/%3E%3Cpath d='M33.5 1L1.5 33' stroke='%23ABABAB' stroke-width='2'/%3E%3C/svg%3E");
+        top: 14px;
+        right: 14px;
+    }
+
+    .modal_title {
+        gap: 12px;
+
+        font-size: 18px;
+        line-height: 34px;
+    }
+
+    .modal_title span {
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: 0;
+    }
+
+    .modal_form {
+        gap: 24px;
+    }
+
+    .modal_form_label-core {
+        gap: 12px;
+
+        font-size: 14px;
+        line-height: 24px
+    }
+
+    .modal_form_label-core textarea,
+    .modal_form_label-core input {
+        height: 50px;
+
+        font-size: 14px;
+    }
+
+    .modal_footer {
+        margin-top: 12px;
+        gap: 14px;
+    }
+
+    .modal_btn-submit {
+        padding: 16px 36px;
+        height: 50px;
+
+        font-size: 14px;
+    }
+
+    .modal_subtitle {
+        max-width: 96%;
+
+        font-size: 12px;
+    }
+
+
+    .modal_content_success {
+        align-items: start;
+        gap: 22px;
+        padding: 20px;
+    }
+
+    .modal_content_success .modal_title {
+        text-align: start;
+        align-self: start;
+        max-width: 86%;
+        gap: 12px;
+    }
+
+    .modal_content_success .modal_title span {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .modal_content_success_icon {
+        width: 96px;
+        height: 96px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 164 164' fill='none'%3E%3Ccircle cx='82' cy='82' r='82' fill='%23FFDB5B'/%3E%3Cpath d='M55 81.4062L74.3085 101L110 63' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    }
+
+
+    .modal-for-sale-swiper_content {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .modal-for-sale-swiper_content .modal_btn-close {
+        top: -27px;
+        right: 0;
+        width: 21px;
+        height: 21px;
+        background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.19336L19.5742 19.3868' stroke='%23fff' stroke-width='2'/%3E%3Cpath d='M1 19.1934L19.5742 0.999949' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E%0A");
+    }
+
+    .modal-for-sale-swiper_text-wrapper {
+        gap: 14px;
+    }
+
+    .modal-for-sale-swiper_discount {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        background: #FFDB5B;
+
+        color: var(--core-color);
+        font-size: 12px;
+        line-height: 19px;
+    }
+
+    .modal-for-sale-swiper_title {
+        margin-top: 0;
+
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .modal-for-sale-swiper_text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .modal-for-sale-swiper_btn-appointment {
+        margin-top: 10px;
+
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .modal-for-sale-swiper_img {
+        max-height: 100%;
+        width: unset;
+        max-width: unset;
+        margin: -20px -20px 0 -20px;
+    }
+
+
+
+
 
 
 
@@ -3510,11 +3953,6 @@ button {
 
     .footer_services-wrapper ul {
         gap: 16px;
-    }
-
-    .footer_services-wrapper p {
-        font-size: 14px;
-        line-height: 2px;
     }
 
     .footer_services-wrapper a {

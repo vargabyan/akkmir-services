@@ -26,7 +26,7 @@ breadcrumb([['url' => '/services.php', 'name' => 'Услуги'], ['url' => '', 
             <div class="our-works_select-car-service_text-wrapper">
                 <span>Работаем с 8:00 до 21:00 (без выходных)</span>
                 <p class="our-works_select-car-service_title">Выбрать автосервис и&nbsp;записаться на услугу</p>
-                <button class="our-works_select-car-service_btn btn-yellow">Записаться <span>в автосервис</span></button>
+                <button class="our-works_select-car-service_btn btn-yellow" data-btn-appointment>Записаться <span>в автосервис</span></button>
             </div>
             <img class="our-works_select-car-service_img" src="/images/Vector 344.png" alt="img">
             <img class="our-works_select-car-service_img" src="/images/Vector 368.png" alt="img">
@@ -47,7 +47,7 @@ breadcrumb([['url' => '/services.php', 'name' => 'Услуги'], ['url' => '', 
                     Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.
                 </p>
                 <p class="prices_item_price">от <span>2 560 руб.</span></p>
-                <button class="prices_item_btn">записаться</button>
+                <button class="prices_item_btn" data-btn-appointment>записаться</button>
             </div>
         <?php } ?>
     </div>
@@ -62,24 +62,36 @@ $response_data_sale = [
         'title' =>  'Ремонт проколов и порезов',
         'subtitle' =>  'Вулканизация шин',
         'discount' =>  '20%',
+        'id' => '2gf6df65fd6fd65',
+        'text' => 'Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.
+Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.',
     ],
     [
         'image' =>  '/images/1bc96a447f4ae50a09b85f369d4cf5c8.png',
         'title' =>  'Замена пасла в двигателе в подарок',
         'subtitle' =>  'При покупке от 4-х дитров моторного масла и масляного фильтра в наших магазинах',
         'discount' =>  '',
+        'id' => '564fd65d6fd87df5',
+        'text' => 'Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.
+Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.',
     ],
     [
         'image' =>  '/images/f456d721d16987e0a0d52404d32b06df.png',
         'title' =>  'Ремонт проколов и порезов',
         'subtitle' =>  'Вулканизация шин',
         'discount' =>  '20%',
+        'id' => '2j6fgh6df564',
+        'text' => 'Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.
+Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.',
     ],
     [
         'image' =>  '/images/1bc96a447f4ae50a09b85f369d4cf5c8.png',
         'title' =>  'Замена пасла в двигателе в подарок',
         'subtitle' =>  'При покупке от 4-х дитров моторного масла и масляного фильтра в наших магазинах',
         'discount' =>  '',
+        'id' => '8s65sd65fg45',
+        'text' => 'Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.
+Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.',
     ],
 ]
 
@@ -103,13 +115,29 @@ $response_data_sale = [
                         </div>
                         <div class="sale_item_footer-wrapper">
                             <p class="sale_item_title"><span><?= $item['subtitle'] ?></span><?= $item['title'] ?></p>
-                            <a class="sale_item_link" href="">подробнее</a>
+                            <button class="sale_item_link" data-btn-open-modal-for-sale-id="<?= $item['id'] ?>">подробнее</button>
                         </div>
                     </div>
                 </div>
             <?php } ?>
         </div>
     </div>
+</section>
+
+
+<section class="modal-wrapper" data-modal-for-sale-swiper>
+    <?php foreach ($response_data_sale as $item) { ?>
+        <div class="modal-for-sale-swiper_content" data-modal-for-sale-swiper-content data-modal-for-sale-id="<?= $item['id'] ?>">
+            <button class="modal_btn-close" data-modal-for-sale-btn-close></button>
+            <div class="modal-for-sale-swiper_text-wrapper">
+                <span class="modal-for-sale-swiper_discount <?= $item['discount'] ? 'active' : '' ?>">скидка <?= $item['discount'] ?></span>
+                <h1 class="modal-for-sale-swiper_title"><?= $item['title'] ?></h1>
+                <p class="modal-for-sale-swiper_text"><?= $item['text'] ?></p>
+                <button class="modal-for-sale-swiper_btn-appointment btn-yellow" data-btn-appointment>записаться</button>
+            </div>
+            <img class="modal-for-sale-swiper_img" src="<?= $item['image'] ?>" alt="img">
+        </div>
+    <?php } ?>
 </section>
 
 
@@ -328,7 +356,7 @@ $response_data_service_centers = [
                                         <a href="">Ремонт стартеров и генераторов</a>
                                         <a href="">Регулировка углов установки колёс</a>
                                     </div>
-                                    <button class="service-centers_address_item_form_btn-submit">Выбрать услугу и записаться</button>
+                                    <button class="service-centers_address_item_form_btn-submit" data-btn-appointment>Выбрать услугу и записаться</button>
                                 </div>
                             </div>
                         <?php } ?>
@@ -361,7 +389,7 @@ $response_data_service_centers = [
                                         <a href="">Ремонт стартеров и генераторов</a>
                                         <a href="">Регулировка углов установки колёс</a>
                                     </div>
-                                    <button class="service-centers_address_item_form_btn-submit">Выбрать услугу и записаться</button>
+                                    <button class="service-centers_address_item_form_btn-submit" data-btn-appointment>Выбрать услугу и записаться</button>
                                 </div>
                             </div>
                         <?php } ?>
@@ -480,7 +508,7 @@ $response_data_questions = [
 
                 <div class="questions_ask-question">
                     <p class="questions_ask-question_title">Нужна консультация или остались вопросы?</p>
-                    <button class="questions_ask-question_btn">Задать вопрос</button>
+                    <button class="questions_ask-question_btn" data-btn-ask-question>Задать вопрос</button>
                 </div>
             </div>
         </div>

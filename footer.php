@@ -21,8 +21,8 @@
         <div class="footer_nav-wrapper">
             <nav class="footer_nav">
                 <ul>
-                    <li><a href="/about-company">О компании</a></li>
-                    <li><a href="/contacts">Контакты</a></li>
+                    <li><a href="/about-company.php">О компании</a></li>
+                    <li><a href="/contacts.php">Контакты</a></li>
                 </ul>
             </nav>
             <div class="footer_policy-wrapper">
@@ -31,7 +31,7 @@
         </div>
         <nav class="footer_services-wrapper">
             <ul>
-                <li><p>Услуги автосервиса</p></li>
+                <li><a href="/services.php">Услуги автосервиса</a></li>
                 <li><a href="">Ремонт ходовой части</a></li>
                 <li><a href="">Услуги диагноста-автоэлектрика</a></li>
                 <li><a href="">Ремонт тормозной системы</a></li>
@@ -45,6 +45,11 @@
         </nav>
     </div>
 </footer>
+
+
+<?php
+require 'popups.php';
+?>
 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

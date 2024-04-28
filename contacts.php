@@ -287,7 +287,7 @@ $response_data_service_centers = [
                                         <a href="">Ремонт стартеров и генераторов</a>
                                         <a href="">Регулировка углов установки колёс</a>
                                     </div>
-                                    <button class="service-centers_address_item_form_btn-submit">Выбрать услугу и записаться</button>
+                                    <button class="service-centers_address_item_form_btn-submit" data-btn-appointment>Выбрать услугу и записаться</button>
                                 </div>
                             </div>
                         <?php } ?>
@@ -320,7 +320,7 @@ $response_data_service_centers = [
                                         <a href="">Ремонт стартеров и генераторов</a>
                                         <a href="">Регулировка углов установки колёс</a>
                                     </div>
-                                    <button class="service-centers_address_item_form_btn-submit">Выбрать услугу и записаться</button>
+                                    <button class="service-centers_address_item_form_btn-submit" data-btn-appointment>Выбрать услугу и записаться</button>
                                 </div>
                             </div>
                         <?php } ?>

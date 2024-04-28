@@ -131,6 +131,7 @@ document.addEventListener('click', e => {
         const allOpenOptionWrapper = document.querySelectorAll('.active[data-select-option-wrapper]');
 
         optionWrapper.classList.toggle('active');
+        btn.classList.toggle('rotate');
         allOpenOptionWrapper.forEach(item => {
             item.classList.remove('active');
         })
@@ -148,6 +149,7 @@ document.addEventListener('change', e => {
 
         btn.textContent = option.value;
         btn.classList.add('active');
+        btn.classList.remove('rotate');
         optionWrapper.classList.remove('active');
     }
 })
@@ -158,17 +160,112 @@ document.addEventListener('click', e => {
     const btn = e.target.closest('[data-select-value-and-btn]');
 
     if (optionWrapper && !optionWrapper_ && !btn) {
+        const selectWrapper = optionWrapper.closest('[data-select-wrapper]');
+        const btn_ = selectWrapper.querySelector('[data-select-value-and-btn]');
 
+        btn_.classList.remove('rotate');
         optionWrapper.classList.remove('active');
     }
 })
 
 
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-modal-btn-close]');
+
+    if (btn) {
+        const modalWrapper = btn.closest('[data-modal-wrapper]');
+        const content = modalWrapper.querySelector('[data-modal-content]');
+        const successContent = modalWrapper.querySelector('[data-modal-success-content]');
+
+        modalWrapper.classList.remove('active');
+        content.classList.remove('active');
+        successContent.classList.remove('active');
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-btn-ask-question]');
+
+    if (btn) {
+        const modalWrapper = document.querySelector('[data-modal-ask-question]');
+        const content = modalWrapper.querySelector('[data-modal-content]');
+
+        modalWrapper.classList.add('active');
+        content.classList.add('active');
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-modal-btn-submit]');
+
+    if (btn) {
+        e.preventDefault();
+        const modalWrapper = btn.closest('[data-modal-wrapper]');
+        const content = modalWrapper.querySelector('[data-modal-content]');
+        const successContent = modalWrapper.querySelector('[data-modal-success-content]');
+
+        content.classList.remove('active');
+        successContent.classList.add('active');
+    }
+})
+
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-btn-appointment]');
+
+    if (btn) {
+        const modalWrapper = document.querySelector('[data-modal-appointment]');
+        const content = modalWrapper.querySelector('[data-modal-content]');
+
+        modalWrapper.classList.add('active');
+        content.classList.add('active');
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-btn-request-a-call]');
+
+    if (btn) {
+        const modalWrapper = document.querySelector('[data-modal-request-a-call]');
+        const content = modalWrapper.querySelector('[data-modal-content]');
+
+        modalWrapper.classList.add('active');
+        content.classList.add('active');
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
 
 
 
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-modal-for-sale-btn-close]');
 
+    if (btn) {
+        const modalWrapper = btn.closest('[data-modal-for-sale-swiper]');
+        const modalContent = btn.closest('[data-modal-for-sale-id]');
 
+        modalWrapper.classList.remove('active');
+        modalContent.classList.remove('active');
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-btn-open-modal-for-sale-id]');
+
+    if (btn) {
+        const modalID = btn.getAttribute('data-btn-open-modal-for-sale-id');
+        const modalWrapper = document.querySelector('[data-modal-for-sale-swiper]');
+        const modalContent = modalWrapper.querySelector(`[data-modal-for-sale-id="${modalID}"]`);
+
+        modalWrapper.classList.add('active');
+        modalContent.classList.add('active');
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
 
 
 
