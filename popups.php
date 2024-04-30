@@ -54,11 +54,11 @@
 
             <label class="modal_form_label-core">
                 Имя*
-                <input type="text">
+                <input type="text" placeholder="Иван">
             </label>
             <label class="modal_form_label-core">
                 Телефон*
-                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="8 900 000 00 00">
             </label>
 
             <div class="modal_footer">
@@ -91,11 +91,11 @@
 
             <label class="modal_form_label-core">
                 Имя*
-                <input type="text">
+                <input type="text" placeholder="Иван">
             </label>
             <label class="modal_form_label-core">
                 Телефон*
-                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="8 900 000 00 00">
             </label>
             <label class="modal_form_label-core">
                 Задать свой вопрос
@@ -132,11 +132,11 @@
 
             <label class="modal_form_label-core">
                 Имя*
-                <input type="text">
+                <input type="text" placeholder="Иван">
             </label>
             <label class="modal_form_label-core">
                 Телефон*
-                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="8 900 000 00 00">
             </label>
 
             <div class="modal_footer">
