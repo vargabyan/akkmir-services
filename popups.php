@@ -6,6 +6,51 @@
             <span>Наш менеджер свяжется с вами в ближайшее время для уточнения деталей заявки</span>
         </h1>
         <form class="modal_form" action="">
+            <div class="modal_form_special_item-wrapper">
+                <div class="contacts_form_item" data-select-wrapper>
+                    <span class="contacts_form_item_label">Адреса автосервисов</span>
+                    <span class="contacts_form_item_input" data-select-value-and-btn>г. Екатеринбург</span>
+                    <div class="contacts_form_select_label-wrapper" data-select-option-wrapper>
+                        <div>
+                            <?php foreach ([1,2,3,4,5,6,7,8,9,10] as $item) { ?>
+                                <label class="contacts_form_select_label">
+                                    Нижний Тагил
+                                    <input type="radio" name="select-radio" value="Нижний Тагил" data-select-option>
+                                </label>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contacts_form_item" data-select-wrapper>
+                    <span class="contacts_form_item_input" data-select-value-and-btn>ул. Шефская 95А</span>
+                    <div class="contacts_form_select_label-wrapper" data-select-option-wrapper>
+                        <div>
+                            <?php foreach ([1,2,3,4,5,6,7,8,9,10] as $item) { ?>
+                                <label class="contacts_form_select_label">
+                                    ул. Аппаратная, 5
+                                    <input type="radio" name="select-radio" value="ул. Аппаратная, 5" data-select-option>
+                                </label>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacts_form_item" data-select-wrapper>
+                <span class="contacts_form_item_label">Выберите услугу</span>
+                <span class="contacts_form_item_input" data-select-value-and-btn>Замена аккумулятора</span>
+                <div class="contacts_form_select_label-wrapper" data-select-option-wrapper>
+                    <div>
+                        <?php foreach ([1,2,3,4,5,6,7,8,9,10] as $item) { ?>
+                            <label class="contacts_form_select_label">
+                                Ремонт тормозной системы
+                                <input type="radio" name="select-radio" value="Ремонт тормозной системы" data-select-option>
+                            </label>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
 
             <label class="modal_form_label-core">
                 Имя*

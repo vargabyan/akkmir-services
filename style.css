@@ -2066,6 +2066,25 @@ button {
     gap: 25px;
 }
 
+.modal_form_special_item-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.modal_form_special_item-wrapper .contacts_form_item {
+    max-width: 416px;
+    width: 100%;
+    justify-content: end;
+}
+
+.modal_form .contacts_form_item_input {
+    background: unset;
+    border-radius: 10px;
+    border: 1px solid #ABABAB;
+}
+
 .modal_form_label-core {
     display: flex;
     flex-direction: column;
@@ -2855,6 +2874,17 @@ button {
     .modal_btn-submit {
         font-size: clamp(14px, 4.5vw, 18px);
     }
+
+
+    .modal_form_special_item-wrapper {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .modal_form_special_item-wrapper .contacts_form_item {
+        max-width: 100%;
+    }
+
 
 }
 
