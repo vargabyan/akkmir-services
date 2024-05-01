@@ -268,6 +268,84 @@ document.addEventListener('click', e => {
 })
 
 
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-mobile-menu-btn-open]');
+
+    if (btn) {
+        const wrapper = btn.closest('[data-data-mobile-menu-core-container]');
+        const menuContainer = btn.closest('[data-mobile-menu]');
+        const hiddenEl = menuContainer.querySelector('[data-mobile-menu-items-wrapper]');
+        const allActiveHiddenEl = wrapper.querySelectorAll('.active[data-mobile-menu-items-wrapper]');
+
+        hiddenEl.classList.toggle('active');
+        allActiveHiddenEl.forEach(item => {
+            item.classList.remove('active');
+        })
+    }
+})
+
+
+document.addEventListener('click', e => {
+    const closest = e.target.closest('.active[data-mobile-menu-items-wrapper]');
+    const btn = e.target.closest('[data-mobile-menu-btn-open]');
+    const allActiveHiddenEl = document.querySelectorAll('.active[data-mobile-menu-items-wrapper]');
+
+    if (allActiveHiddenEl.length && !closest && !btn) {
+        allActiveHiddenEl.forEach(item => {
+            item.classList.remove('active');
+        })
+    }
+})
+
+
+const MobileMenuActions = () => {
+    const innerWidth = window.innerWidth;
+    const scrollY = window.scrollY;
+    const mobileMenu = document.querySelector('[data-data-mobile-menu-core-container]');
+    const positionMobileMenu = mobileMenu.offsetTop;
+
+    if (innerWidth < 1200 && scrollY > positionMobileMenu) {
+
+        mobileMenu.classList.add('active')
+    } else {
+        mobileMenu.classList.remove('active')
+    }
+}
+window.addEventListener('scroll', () => {
+    MobileMenuActions()
+})
+window.addEventListener('resize', () => {
+    MobileMenuActions()
+})
+document.addEventListener('DOMContentLoaded', () => {
+    MobileMenuActions()
+})
+
+
+const MobileBottomMenuActions = () => {
+    const innerWidth = window.innerWidth;
+    const mobileBottomMenu = document.querySelector('[data-mobile-bottom-menu-wrapper]');
+
+    if (innerWidth < 1200) {
+
+        mobileBottomMenu.classList.add('active')
+    } else {
+        mobileBottomMenu.classList.remove('active')
+    }
+}
+window.addEventListener('scroll', () => {
+    MobileBottomMenuActions();
+})
+window.addEventListener('resize', () => {
+    MobileBottomMenuActions()
+})
+document.addEventListener('DOMContentLoaded', () => {
+    MobileBottomMenuActions()
+})
+
+
+
+
 
 
 

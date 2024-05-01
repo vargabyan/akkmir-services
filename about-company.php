@@ -28,8 +28,8 @@ breadcrumb([['url' => '', 'name' => 'О компании']]);
                 <p class="our-works_select-car-service_title">Выбрать автосервис и&nbsp;записаться на услугу</p>
                 <button class="our-works_select-car-service_btn btn-yellow" data-btn-appointment>Записаться <span>в автосервис</span></button>
             </div>
-            <img class="our-works_select-car-service_img" src="/images/Vector 344.png" alt="img">
-            <img class="our-works_select-car-service_img" src="/images/Vector 368.png" alt="img">
+            <img class="our-works_select-car-service_img" src="/images/f3a8eac396fcdc043dce306e328a40a1.png" alt="img">
+            <img class="our-works_select-car-service_img" src="/images/Vector 368 (1).png" alt="img">
         </div>
     </div>
 </section>
