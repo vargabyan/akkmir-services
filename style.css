@@ -2005,7 +2005,7 @@ button {
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.31);
-    z-index: 9;
+    z-index: 19;
 }
 
 .modal-wrapper.active {
