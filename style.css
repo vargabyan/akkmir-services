@@ -1148,7 +1148,13 @@ button {
     text-transform: uppercase;
 }
 
-.service-centers_address_item_address span {
+.service-centers_address_item_address button {
+    width: max-content;
+    cursor: pointer;
+    background-color: unset;
+    border: none;
+    padding: 0;
+
     color: #ABABAB;
     font-size: 14px;
     line-height: 24px;
@@ -2275,7 +2281,7 @@ button {
 }
 
 
-.modal_content[data-modal-content] {
+[data-modal-select-city] .modal_content {
     max-width: 680px;
     display: flex;
     gap: 17px;
@@ -2351,6 +2357,39 @@ button {
     text-decoration-line: underline;
 }
 
+
+.modal-map_content {
+    max-width: 1176px;
+    width: 100%;
+    height: max-content;
+    position: relative;
+    display: flex;
+    gap: 35px;
+    flex-direction: column;
+    border-radius: 20px;
+    background: #FFF;
+    margin: auto;
+    overflow: hidden;
+}
+
+.modal-map_btn-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: block;
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='50' height='50' rx='10' fill='%23FFDB5B'/%3E%3Cpath d='M12 12.4665L37.9995 37.933' stroke='%23343434' stroke-width='2'/%3E%3Cpath d='M12 37.4665L37.9995 12' stroke='%23343434' stroke-width='2'/%3E%3C/svg%3E%0A");
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.modal-map_content iframe {
+    width: 100%;
+}
 
 
 
@@ -4202,6 +4241,24 @@ button {
 
     .modal_form-select-city_label {
         font-size: 18px;
+    }
+
+
+    .modal-wrapper[data-modal-map] {
+        padding: 0;
+    }
+
+    .modal-map_content {
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .modal-map_btn-close {
+        top: 20px;
+        right: 20px;
+        width: 36px;
+        height: 36px;
+        background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='50' height='50' rx='10' fill='%23FFDB5B'/%3E%3Cpath d='M12 12.4665L37.9995 37.933' stroke='%23343434' stroke-width='2'/%3E%3Cpath d='M12 37.4665L37.9995 12' stroke='%23343434' stroke-width='2'/%3E%3C/svg%3E%0A");
     }
 
 

@@ -182,7 +182,7 @@ $response_data_cities = [
             Выберите <br> свой город
         </h1>
         <label class="modal_label-input-search">
-            <input type="text" placeholder="поиск">
+            <input type="text" placeholder="поиск" data-modal-select-cit-search-input>
         </label>
         <form class="modal_form-select-city" action="">
             <?php foreach ($response_data_cities as $item) { ?>
@@ -192,5 +192,13 @@ $response_data_cities = [
                 </label>
             <?php } ?>
         </form>
+    </div>
+</section>
+
+
+<section class="modal-wrapper" data-modal-wrapper data-modal-map>
+    <div class="modal-map_content" data-modal-content>
+        <button class="modal-map_btn-close" data-modal-btn-close></button>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A199d8316421c34bab0bf81400a1ea3bd857cfb587baa6a6848cb7d87766c765f&amp;source=constructor" width="1076" height="665" frameborder="0"></iframe>
     </div>
 </section>

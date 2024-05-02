@@ -175,12 +175,16 @@ document.addEventListener('click', e => {
     if (btn) {
         const modalWrapper = btn.closest('[data-modal-wrapper]');
         const content = modalWrapper.querySelector('[data-modal-content]');
-        const successContent = modalWrapper.querySelector('[data-modal-success-content]');
 
         modalWrapper.classList.remove('active');
         content.classList.remove('active');
-        successContent.classList.remove('active');
         document.querySelector('body').style['overflow'] = '';
+
+        const successContent = modalWrapper.querySelector('[data-modal-success-content]');
+
+        if (successContent) {
+            successContent.classList.remove('active');
+        }
     }
 })
 
@@ -239,14 +243,24 @@ document.addEventListener('click', e => {
 })
 
 document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-btn-open-map]');
+
+    if (btn) {
+        const modalWrapper = document.querySelector('[data-modal-map]');
+
+        modalWrapper.classList.add('active');
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+
+document.addEventListener('click', e => {
     const btn = e.target.closest('[data-btn-select-city]');
 
     if (btn) {
         const modalWrapper = document.querySelector('[data-modal-select-city]');
-        // const content = modalWrapper.querySelector('[data-modal-content]');
 
         modalWrapper.classList.add('active');
-        // content.classList.add('active');
         document.querySelector('body').style['overflow'] = 'hidden';
     }
 })
@@ -255,12 +269,29 @@ document.addEventListener('click', e => {
     const input = e.target.closest('[data-modal-select-city-input]');
 
     if (input) {
-        const modalWrapper = document.querySelector('[data-modal-select-city]');
+        const modalWrapper = input.closest('[data-modal-select-city]');
         const btnOpen = document.querySelector('[data-btn-select-city]');
 
         btnOpen.textContent = input.querySelector('input').value;
         modalWrapper.classList.remove('active');
         document.querySelector('body').style['overflow'] = '';
+    }
+})
+
+document.addEventListener('input', e => {
+    const input = e.target.closest('[data-modal-select-cit-search-input]');
+
+    if (input) {
+        const modalWrapper = input.closest('[data-modal-select-city]');
+        const formItems = modalWrapper.querySelectorAll('[data-modal-select-city-input]');
+
+        Object.values(formItems).forEach( item => {
+            if (item.textContent.toLocaleUpperCase().search(input.value.toLocaleUpperCase()) > -1) {
+                item.style['display'] = 'flex';
+            } else {
+                item.style['display'] = 'none';
+            }
+        })
     }
 })
 

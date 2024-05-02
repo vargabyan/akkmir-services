@@ -364,7 +364,7 @@ $response_data_service_centers = [
                                 <p class="service-centers_address_item_address">
                                     <span>екатеринбург</span>
                                     <?= $contact['address'] ?>
-                                    <span>показать на карте</span>
+                                    <button data-btn-open-map>показать на карте</button>
                                 </p>
                                 <a class="service-centers_address_item_tel" href="tel:+7343261-62-62"><?= $contact['tel'] ?></a>
                                 <p class="service-centers_address_item_working-hours"><span>Время работы</span>с 10:00 до 19:00 <br> без выходных</p>
@@ -397,7 +397,7 @@ $response_data_service_centers = [
                                     <p class="service-centers_address_item_address">
                                         <span>екатеринбург</span>
                                         <?= $contact['address'] ?>
-                                        <span>показать на карте</span>
+                                        <button data-btn-open-map>показать на карте</button>
                                     </p>
                                     <a class="service-centers_address_item_tel" href="tel:+7343261-62-62"><?= $contact['tel'] ?></a>
                                 </div>
