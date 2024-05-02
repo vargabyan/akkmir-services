@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css">
     <title>Akkmir services</title>
 </head>
@@ -18,15 +18,12 @@
             <p class="header_logo-name">ВОЛЬТ</p>
             <span>Сервисный центр</span>
         </a>
-        <form action="" class="header_select-city-wrapper">
+        <div class="header_select-city-wrapper">
             <p class="header_working-hours">С 8:00 до 21:00</p>
-            <label class="header_city_label">
-                <span class="header_city-name">Екатеринбург</span>
-                <select class="header_city_select" name="" id="">
-                    <option value="Екатеринбург">Екатеринбург</option>
-                </select>
-            </label>
-        </form>
+            <div class="header_city_label">
+                <span class="header_city-name" data-btn-select-city>Екатеринбург</span>
+            </div>
+        </div>
         <nav class="header_nav">
             <ul>
                 <li><a href="/services.php">Услуги автосервиса</a></li>
@@ -34,10 +31,12 @@
                 <li><a href="/contacts.php">Контакты</a></li>
             </ul>
         </nav>
-        <a class="header_tel" href="tel:+7343261-62-62">
-            +7 343 261-62-62
-            <span>Заказать звонок</span>
-        </a>
+        <div class="header_tel-wrapper">
+            <a class="header_tel" href="tel:+7343261-62-62">
+                +7 343 261-62-62
+            </a>
+            <button data-btn-request-a-call>Заказать звонок</button>
+        </div>
     </div>
     <div class="mobile-menu-core-container" data-data-mobile-menu-core-container>
         <div class="mobile-menu-wrapper">
@@ -53,7 +52,7 @@
                         </ul>
                         <div class="mobile-menu_tel-wrapper">
                             <a class="mobile-menu_tel" href="tel:+7343261-62-62">+7 343 261-62-62</a>
-                            <button class="mobile-menu_request-call">Заказать звонок</button>
+                            <button class="mobile-menu_request-call" data-btn-request-a-call>Заказать звонок</button>
                         </div>
                         <button class="mobile-menu_btn-appointment btn-yellow" data-btn-appointment>записаться в сервис</button>
                     </nav>

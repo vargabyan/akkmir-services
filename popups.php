@@ -157,3 +157,40 @@
         <span class="modal_content_success_icon"></span>
     </div>
 </section>
+
+
+<?php
+
+$response_data_cities = [
+    'Екатеринбург',
+    'Нижний Тагил',
+    'Первоуральск',
+    'Полевской',
+    'Серов',
+    'Сысерть',
+    'Тобольск',
+    'Тюмень',
+]
+
+?>
+
+
+<section class="modal-wrapper" data-modal-wrapper data-modal-select-city>
+    <div class="modal_content" data-modal-content>
+        <button class="modal_btn-close" data-modal-btn-close></button>
+        <h1 class="modal_title">
+            Выберите <br> свой город
+        </h1>
+        <label class="modal_label-input-search">
+            <input type="text" placeholder="поиск">
+        </label>
+        <form class="modal_form-select-city" action="">
+            <?php foreach ($response_data_cities as $item) { ?>
+                <label class="modal_form-select-city_label" data-modal-select-city-input>
+                    <?= $item ?>
+                    <input type="radio" value="<?= $item ?>" name="city">
+                </label>
+            <?php } ?>
+        </form>
+    </div>
+</section>

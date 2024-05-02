@@ -238,6 +238,32 @@ document.addEventListener('click', e => {
     }
 })
 
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-btn-select-city]');
+
+    if (btn) {
+        const modalWrapper = document.querySelector('[data-modal-select-city]');
+        // const content = modalWrapper.querySelector('[data-modal-content]');
+
+        modalWrapper.classList.add('active');
+        // content.classList.add('active');
+        document.querySelector('body').style['overflow'] = 'hidden';
+    }
+})
+
+document.addEventListener('click', e => {
+    const input = e.target.closest('[data-modal-select-city-input]');
+
+    if (input) {
+        const modalWrapper = document.querySelector('[data-modal-select-city]');
+        const btnOpen = document.querySelector('[data-btn-select-city]');
+
+        btnOpen.textContent = input.querySelector('input').value;
+        modalWrapper.classList.remove('active');
+        document.querySelector('body').style['overflow'] = '';
+    }
+})
+
 
 
 document.addEventListener('click', e => {
