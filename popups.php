@@ -198,6 +198,28 @@ $response_data_cities = [
 
 <section class="modal-wrapper" data-modal-wrapper data-modal-map>
     <div class="modal-map_content" data-modal-content>
+        <div class="map-marker-wrapper" data-map-marker-wrapper>
+            <div class="map-marker" data-map-marker></div>
+            <div class="map-marker_description" data-map-marker-description>
+                <div class="map-marker_description_head">
+                    <div class="map-marker_description_title-wrapper">
+                        <p class="map-marker_description_title">
+                            г. Екатеринбург
+                            <span>ул. Шефская 95А</span>
+                        </p>
+                        <p class="map-marker_description_working-hours">
+                            <span>С 8:00 до 21:00</span> без выходных
+                        </p>
+                    </div>
+                    <button class="map-marker_btn-close" data-map-marker-btn-close></button>
+                </div>
+                <a class="map-marker_description_tel" href="tel:+7343261-62-62">+7 343 261-62-62</a>
+                <div class="map-marker_description_footer">
+                    <button class="map-marker_description_btn">Выбрать услугу и записаться</button>
+                    <button class="map-marker_description_btn">проложить маршрут</button>
+                </div>
+            </div>
+        </div>
         <button class="modal-map_btn-close" data-modal-btn-close></button>
         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A199d8316421c34bab0bf81400a1ea3bd857cfb587baa6a6848cb7d87766c765f&amp;source=constructor" width="1076" height="665" frameborder="0"></iframe>
     </div>

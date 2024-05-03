@@ -255,6 +255,33 @@ document.addEventListener('click', e => {
 
 
 document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-map-marker-btn-close]');
+
+    if (btn) {
+        const wrapper = btn.closest('[data-map-marker-wrapper]');
+        const contentDescription = wrapper.querySelector('[data-map-marker-description]');
+        const allContentDescription = document.querySelectorAll('[data-map-marker-description]');
+
+        contentDescription.classList.remove('active');
+        allContentDescription.forEach(item => {
+            item.classList.remove('active');
+        })
+    }
+})
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-map-marker]');
+
+    if (btn) {
+        const wrapper = btn.closest('[data-map-marker-wrapper]');
+        const contentDescription = wrapper.querySelector('[data-map-marker-description]');
+
+        contentDescription.classList.add('active');
+    }
+})
+
+
+document.addEventListener('click', e => {
     const btn = e.target.closest('[data-btn-select-city]');
 
     if (btn) {
