@@ -986,6 +986,18 @@ button {
     line-height: 34px;
 }
 
+.questions_item_answer {
+    margin-top: 30px;
+    display: none;
+
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.questions_item_answer.active {
+    display: block;
+}
+
 .questions_ask-question {
     margin-top: 30px;
     width: 100%;

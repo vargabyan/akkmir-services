@@ -428,7 +428,21 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-question-btn]');
 
+    if (btn) {
+        const wrapper = btn.closest('[data-question-wrapper]');
+        const hiddenEl = wrapper.querySelector('[data-question-hidden]');
+        const container = wrapper.closest('[data-questions-items-wrapper]');
+        const allItems = container.querySelectorAll('.active[data-question-hidden]');
+
+        hiddenEl.classList.toggle('active')
+        allItems.forEach(item => {
+            item.classList.remove('active')
+        })
+    }
+})
 
 
 

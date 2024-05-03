@@ -583,12 +583,17 @@ $response_data_questions = [
         <h1 class="site-header questions_header">Ответы <br> на вопросы</h1>
         <div class="questions_content">
             <img class="questions_core_img" src="/images/094374fefa195448aba7c9bb3e1a2a8f.png" alt="img">
-            <div class="questions_items-wrapper">
+            <div class="questions_items-wrapper" data-questions-items-wrapper>
 
                 <?php foreach ($response_data_questions as $item) { ?>
-                    <div class="questions_item">
-                        <div class="questions_item_btn">
+                    <div class="questions_item" data-question-wrapper>
+                        <div class="questions_item_btn" data-question-btn>
                             <p><?= $item['question'] ?></p>
+                        </div>
+                        <div class="questions_item_answer" data-question-hidden>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                            </p>
                         </div>
                     </div>
                 <?php } ?>
