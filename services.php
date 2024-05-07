@@ -153,14 +153,97 @@ $response_data_sale = [
 <section class="modal-wrapper" data-modal-for-sale-swiper>
     <?php foreach ($response_data_sale as $item) { ?>
         <div class="modal-for-sale-swiper_content" data-modal-for-sale-swiper-content data-modal-for-sale-id="<?= $item['id'] ?>">
-            <button class="modal_btn-close" data-modal-for-sale-btn-close></button>
-            <div class="modal-for-sale-swiper_text-wrapper">
-                <span class="modal-for-sale-swiper_discount <?= $item['discount'] ? 'active' : '' ?>">скидка <?= $item['discount'] ?></span>
-                <h1 class="modal-for-sale-swiper_title"><?= $item['title'] ?></h1>
-                <p class="modal-for-sale-swiper_text"><?= $item['text'] ?></p>
-                <button class="modal-for-sale-swiper_btn-appointment btn-yellow" data-btn-appointment>записаться</button>
+            <div class="modal-for-sale-swiper_head" data-modal-for-sale-swiper-head-block>
+                <button class="modal_btn-close" data-modal-for-sale-btn-close></button>
+                <div class="modal-for-sale-swiper_text-wrapper">
+                    <span class="modal-for-sale-swiper_discount <?= $item['discount'] ? 'active' : '' ?>">скидка <?= $item['discount'] ?></span>
+                    <h1 class="modal-for-sale-swiper_title"><?= $item['title'] ?></h1>
+                    <p class="modal-for-sale-swiper_text"><?= $item['text'] ?></p>
+                    <button class="modal-for-sale-swiper_btn-appointment btn-yellow" data-modal-for-sale-swiper-btn-appointment>записаться</button>
+                </div>
+                <img class="modal-for-sale-swiper_img" src="<?= $item['image'] ?>" alt="img">
             </div>
-            <img class="modal-for-sale-swiper_img" src="<?= $item['image'] ?>" alt="img">
+            <div class="modal-for-sale-swiper_hidden_elements" data-modal-for-sale-swiper-hidden-elements>
+                <hr class="modal-for-sale-swiper_line" data-modal-for-sale-swiper-line>
+                <div class="modal_content" data-modal-content>
+                    <h1 class="modal_title">
+                        Запишитесь в автосервис в удобном для вас городе
+                        <span>Наш менеджер свяжется с вами в ближайшее время для уточнения деталей заявки</span>
+                    </h1>
+                    <form class="modal_form" action="">
+                        <div class="modal_form_special_item-wrapper">
+                            <div class="contacts_form_item" data-select-wrapper>
+                                <span class="contacts_form_item_label">Адреса автосервисов</span>
+                                <span class="contacts_form_item_input" data-select-value-and-btn>г. Екатеринбург</span>
+                                <div class="contacts_form_select_label-wrapper" data-select-option-wrapper>
+                                    <div>
+                                        <?php foreach ([1,2,3,4,5,6,7,8,9,10] as $key) { ?>
+                                            <label class="contacts_form_select_label">
+                                                Нижний Тагил
+                                                <input type="radio" name="select-radio" value="Нижний Тагил" data-select-option>
+                                            </label>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contacts_form_item" data-select-wrapper>
+                                <span class="contacts_form_item_input" data-select-value-and-btn>ул. Шефская 95А</span>
+                                <div class="contacts_form_select_label-wrapper" data-select-option-wrapper>
+                                    <div>
+                                        <?php foreach ([1,2,3,4,5,6,7,8,9,10] as $key) { ?>
+                                            <label class="contacts_form_select_label">
+                                                ул. Аппаратная, 5
+                                                <input type="radio" name="select-radio" value="ул. Аппаратная, 5" data-select-option>
+                                            </label>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contacts_form_item" data-select-wrapper>
+                            <span class="contacts_form_item_label">Выберите услугу</span>
+                            <span class="contacts_form_item_input" data-select-value-and-btn>Замена аккумулятора</span>
+                            <div class="contacts_form_select_label-wrapper" data-select-option-wrapper>
+                                <div>
+                                    <?php foreach ([1,2,3,4,5,6,7,8,9,10] as $key) { ?>
+                                        <label class="contacts_form_select_label">
+                                            Ремонт тормозной системы
+                                            <input type="radio" name="select-radio" value="Ремонт тормозной системы" data-select-option>
+                                        </label>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="modal_form_label-core">
+                            Имя*
+                            <input type="text" placeholder="Иван">
+                        </label>
+                        <label class="modal_form_label-core">
+                            Телефон*
+                            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="8 900 000 00 00">
+                        </label>
+
+                        <div class="modal_footer">
+                            <button class="modal_btn-submit btn-yellow" data-modal-for-sale-swiper-btn-submit>Оставить заявку</button>
+                            <span class="modal_subtitle">
+                        Нажимая на кнопку, вы соглашаетесь с
+                        <a href="">политикой конфиденциальности</a>
+                    </span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal_content_success" data-modal-success-content>
+                    <button class="modal_btn-close" data-modal-for-sale-btn-close></button>
+                    <h1 class="modal_title">
+                        Ваша заявка успешно отправлена!
+                        <span>Мы перезвоним Вам в ближайшее время</span>
+                    </h1>
+                    <span class="modal_content_success_icon"></span>
+                </div>
+            </div>
         </div>
     <?php } ?>
 </section>
