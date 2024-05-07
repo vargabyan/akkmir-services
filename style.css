@@ -2026,6 +2026,7 @@ button {
     left: 0;
     background: rgba(0, 0, 0, 0.31);
     z-index: 19;
+    padding: 29px 20px 20px 20px;
 }
 
 .modal-wrapper.active {
@@ -2208,18 +2209,33 @@ button {
 .modal-for-sale-swiper_content {
     position: relative;
     display: none;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 60px;
-    max-width: 1176px;
-    width: 100%;
-    border-radius: 20px;
-    background: #FFF;
-    box-shadow: 0 0 44px 0 rgba(0, 0, 0, 0.18);
     margin: auto;
 }
 
 .modal-for-sale-swiper_content.active {
+    display: flex;
+}
+
+.modal-for-sale-swiper_content.switchable-style {
+    max-width: 1176px;
+    width: 100%;
+    display: flex;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0 0 44px 0 rgba(0, 0, 0, 0.18);
+    flex-direction: column;
+    gap: 60px;
+    padding: 60px;
+}
+
+.modal-for-sale-swiper_head {
+    display: none;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 417px;
+}
+
+.modal-for-sale-swiper_head.active {
     display: flex;
 }
 
@@ -2280,6 +2296,32 @@ button {
     flex-shrink: 0;
     border-radius: 20px;
     object-fit: cover;
+}
+
+.modal-for-sale-swiper_hidden_elements {
+    display: none;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.modal-for-sale-swiper_line {
+    display: none;
+    width: 100%;
+    border-top: solid 1px #BBB;
+}
+
+.modal-for-sale-swiper_line.active {
+    display: block;
+}
+
+.modal-for-sale-swiper_hidden_elements .modal_content {
+    max-width: 852px;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-for-sale-swiper_hidden_elements.active {
+    display: flex;
 }
 
 
@@ -2952,11 +2994,6 @@ button {
     }
 
 
-    .modal-wrapper {
-        padding: 29px 20px 20px 20px;
-    }
-
-
     .mobile-menu-core-container {
         width: 100%;
         height: 50px;
@@ -3254,7 +3291,7 @@ button {
     }
 
 
-    .modal-for-sale-swiper_content {
+    .modal-for-sale-swiper_head {
         flex-direction: column-reverse;
     }
 
@@ -3498,7 +3535,7 @@ button {
 
     .modal_form_special_item-wrapper {
         flex-wrap: wrap;
-        gap: 25px;
+        gap: 10px;
     }
 
     .modal_form_special_item-wrapper .contacts_form_item {
@@ -4447,8 +4484,8 @@ button {
     }
 
 
-    .modal-for-sale-swiper_content {
-        gap: 20px;
+    .modal-for-sale-swiper_content.switchable-style {
+        gap: 24px;
         padding: 20px;
     }
 
@@ -4458,6 +4495,14 @@ button {
         width: 21px;
         height: 21px;
         background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.19336L19.5742 19.3868' stroke='%23fff' stroke-width='2'/%3E%3Cpath d='M1 19.1934L19.5742 0.999949' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E%0A");
+    }
+
+    .modal-for-sale-swiper_content .modal_content {
+        box-shadow: none;
+    }
+
+    .modal-for-sale-swiper_hidden_elements {
+        gap: 24px
     }
 
     .modal-for-sale-swiper_text-wrapper {

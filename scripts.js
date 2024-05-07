@@ -230,6 +230,41 @@ document.addEventListener('click', e => {
 })
 
 document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-modal-for-sale-swiper-btn-appointment]');
+
+    if (btn) {
+        const container = btn.closest('[data-modal-for-sale-swiper-content]');
+        const content = container.querySelector('[data-modal-content]');
+        const formWrapper = container.querySelector('[data-modal-for-sale-swiper-hidden-elements]');
+
+        container.classList.add('active');
+        content.classList.add('active');
+        formWrapper.classList.add('active');
+        document.querySelector('body').style['overflow'] = 'hidden';
+        btn.style['display'] = 'none';
+    }
+})
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-modal-for-sale-swiper-btn-submit]');
+
+    if (btn) {
+        e.preventDefault();
+        const container = btn.closest('[data-modal-for-sale-swiper-content]');
+        const content = container.querySelector('[data-modal-content]');
+        const successContent = container.querySelector('[data-modal-success-content]');
+        const headBlock = container.querySelector('[data-modal-for-sale-swiper-head-block]');
+        const line = container.querySelector('[data-modal-for-sale-swiper-line]');
+
+        content.classList.remove('active');
+        headBlock.classList.remove('active');
+        successContent.classList.add('active');
+        line.classList.remove('active');
+        container.classList.remove('switchable-style');
+    }
+})
+
+document.addEventListener('click', e => {
     const btn = e.target.closest('[data-btn-request-a-call]');
 
     if (btn) {
@@ -329,10 +364,29 @@ document.addEventListener('click', e => {
 
     if (btn) {
         const modalWrapper = btn.closest('[data-modal-for-sale-swiper]');
-        const modalContent = btn.closest('[data-modal-for-sale-id]');
+        const allModalContent = modalWrapper.querySelectorAll('.active[data-modal-for-sale-swiper-content]');
+        const allModalSuccessContent = modalWrapper.querySelectorAll('.active[data-modal-success-content]');
+        const allFormWrapper = modalWrapper.querySelectorAll('.active[data-modal-for-sale-swiper-hidden-elements]');
+        const allLine = modalWrapper.querySelectorAll('.active[data-modal-for-sale-swiper-line]');
+        const allBtnAppointment = modalWrapper.querySelectorAll('[data-modal-for-sale-swiper-btn-appointment]');
 
         modalWrapper.classList.remove('active');
-        modalContent.classList.remove('active');
+        allModalContent.forEach(item => {
+            item.classList.remove('active');
+            item.classList.remove('switchable-style');
+        })
+        allModalSuccessContent.forEach(item => {
+            item.classList.remove('active');
+        })
+        allFormWrapper.forEach(item => {
+            item.classList.remove('active');
+        })
+        allLine.forEach(item => {
+            item.classList.remove('active');
+        })
+        allBtnAppointment.forEach(item => {
+            item.style['display'] = 'flex';
+        })
         document.querySelector('body').style['overflow'] = '';
     }
 })
@@ -344,9 +398,16 @@ document.addEventListener('click', e => {
         const modalID = btn.getAttribute('data-btn-open-modal-for-sale-id');
         const modalWrapper = document.querySelector('[data-modal-for-sale-swiper]');
         const modalContent = modalWrapper.querySelector(`[data-modal-for-sale-id="${modalID}"]`);
+        const modalFormContent = modalContent.querySelector('[data-modal-content]');
+        const headBlock = modalContent.querySelector('[data-modal-for-sale-swiper-head-block]');
+        const line = modalContent.querySelector('[data-modal-for-sale-swiper-line]');
 
         modalWrapper.classList.add('active');
         modalContent.classList.add('active');
+        modalFormContent.classList.add('active');
+        modalContent.classList.add('switchable-style');
+        headBlock.classList.add('active');
+        line.classList.add('active');
         document.querySelector('body').style['overflow'] = 'hidden';
     }
 })
