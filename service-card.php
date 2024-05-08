@@ -429,15 +429,15 @@ $response_data_service_centers = [
                                 <div class="service-centers_address_item_form-wrapper">
                                     <button class="service-centers_address_item_btn-open-form" data-service-centers-address-item-btn-open-form>Список оказываемых услуг в данном автосервисе</button>
                                     <div class="service-centers_address_item_form_label-wrapper" data-service-centers-address-item-form-label-wrapper>
-                                        <a href="">Ремонт ходовой части</a>
-                                        <a href="">Услуги диагноста-автоэлектрика</a>
-                                        <a href="">Ремонт тормозной системы</a>
-                                        <a href="">Шиномонтаж</a>
-                                        <a href="">Ремонт рулевого управления</a>
-                                        <a href="">Зарядка и обслуживание аккумуляторов</a>
-                                        <a href="">Работы по техническому обслуживанию</a>
-                                        <a href="">Ремонт стартеров и генераторов</a>
-                                        <a href="">Регулировка углов установки колёс</a>
+                                        <a href="service-card.php">Ремонт ходовой части</a>
+                                        <a href="service-card.php">Услуги диагноста-автоэлектрика</a>
+                                        <a href="service-card.php">Ремонт тормозной системы</a>
+                                        <a href="service-card.php">Шиномонтаж</a>
+                                        <a href="service-card.php">Ремонт рулевого управления</a>
+                                        <a href="service-card.php">Зарядка и обслуживание аккумуляторов</a>
+                                        <a href="service-card.php">Работы по техническому обслуживанию</a>
+                                        <a href="service-card.php">Ремонт стартеров и генераторов</a>
+                                        <a href="service-card.php">Регулировка углов установки колёс</a>
                                     </div>
                                     <button class="service-centers_address_item_form_btn-submit" data-btn-appointment>Выбрать услугу и записаться</button>
                                 </div>
@@ -462,15 +462,15 @@ $response_data_service_centers = [
                                 <div class="service-centers_address_item_form-wrapper">
                                     <button class="service-centers_address_item_btn-open-form" data-service-centers-address-item-btn-open-form>Список оказываемых услуг в данном автосервисе</button>
                                     <div class="service-centers_address_item_form_label-wrapper" data-service-centers-address-item-form-label-wrapper>
-                                        <a href="">Ремонт ходовой части</a>
-                                        <a href="">Услуги диагноста-автоэлектрика</a>
-                                        <a href="">Ремонт тормозной системы</a>
-                                        <a href="">Шиномонтаж</a>
-                                        <a href="">Ремонт рулевого управления</a>
-                                        <a href="">Зарядка и обслуживание аккумуляторов</a>
-                                        <a href="">Работы по техническому обслуживанию</a>
-                                        <a href="">Ремонт стартеров и генераторов</a>
-                                        <a href="">Регулировка углов установки колёс</a>
+                                        <a href="service-card.php">Ремонт ходовой части</a>
+                                        <a href="service-card.php">Услуги диагноста-автоэлектрика</a>
+                                        <a href="service-card.php">Ремонт тормозной системы</a>
+                                        <a href="service-card.php">Шиномонтаж</a>
+                                        <a href="service-card.php">Ремонт рулевого управления</a>
+                                        <a href="service-card.php">Зарядка и обслуживание аккумуляторов</a>
+                                        <a href="service-card.php">Работы по техническому обслуживанию</a>
+                                        <a href="service-card.php">Ремонт стартеров и генераторов</a>
+                                        <a href="service-card.php">Регулировка углов установки колёс</a>
                                     </div>
                                     <button class="service-centers_address_item_form_btn-submit" data-btn-appointment>Выбрать услугу и записаться</button>
                                 </div>
@@ -483,6 +483,19 @@ $response_data_service_centers = [
         </div>
     </div>
     <button class="service-centers_btn-show-more btn-black" data-service-centers-btn-show-more>Показать все адреса</button>
+</section>
+
+
+<section class="core-container service-center">
+    <div class="service-center_title-wrapper">
+        <h1 class="site-header service-center_header">Сервисный центр</h1>
+        <p class="service-center_description">Сервисные центры 12Вольт всегда стремятся превосходить ожидания наших клиентов в отношении качества и исключительного обслуживания, мы гарантированно обеспечим отличное состояние, стабильную и бесперебойную работу вашего автомобиля.</p>
+    </div>
+    <div class="service-center_items-wrapper">
+        <p>Высокое качество запчастей<span>Оригинальные запчасти и качественные аналоги в наличии</span></p>
+        <p>Уютная клиентская зона<span>В нашем автосервисе Вы можете выпить чашечку чая, посмотреть TV. Wi-Fi free</span></p>
+        <p>Соблюдение сроков ремонта<span>При приеме автомобиля в ремонт составляется акт со сроком выдачи автомобиля</span></p>
+    </div>
 </section>
 
 

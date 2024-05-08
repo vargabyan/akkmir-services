@@ -39,24 +39,6 @@ $response_data_sale = [
         'text' => 'Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.
 Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.',
     ],
-    [
-        'image' =>  '/images/f456d721d16987e0a0d52404d32b06df.png',
-        'title' =>  'Ремонт проколов и порезов',
-        'subtitle' =>  'Вулканизация шин',
-        'discount' =>  '20%',
-        'id' => '2j6fgh6df564',
-        'text' => 'Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.
-Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.',
-    ],
-    [
-        'image' =>  '/images/1bc96a447f4ae50a09b85f369d4cf5c8.png',
-        'title' =>  'Замена пасла в двигателе в подарок',
-        'subtitle' =>  'При покупке от 4-х дитров моторного масла и масляного фильтра в наших магазинах',
-        'discount' =>  '',
-        'id' => '8s65sd65fg45',
-        'text' => 'Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.
-Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.',
-    ],
 ]
 
 ?>
@@ -294,24 +276,6 @@ $response_data_service_centers = [
         ],
     ],
     [
-        'city' => 'Первоуральск',
-        'id' => 'sd2323',
-        'contacts' => [
-            [
-                'tel' => '+7 343 261-62-62',
-                'address' => 'ул. Аппаратная, 5',
-            ],
-            [
-                'tel' => '+7 343 261-62-62',
-                'address' => 'ул. Аппаратная, 5',
-            ],
-            [
-                'tel' => '+7 343 261-62-62',
-                'address' => 'ул. Аппаратная, 5',
-            ],
-        ],
-    ],
-    [
         'city' => 'Полевской',
         'id' => 'fdf+666',
         'contacts' => [
@@ -348,28 +312,6 @@ $response_data_service_centers = [
             [
                 'tel' => '+7 343 261-62-62',
                 'address' => 'ул. Аппаратная, 5',
-            ],
-        ],
-    ],
-    [
-        'city' => 'Сысерть',
-        'id' => 'fdf+666',
-        'contacts' => [
-            [
-                'tel' => '+7 343 261-62-00',
-                'address' => 'ул. Аппаратная, 10',
-            ],
-            [
-                'tel' => '+7 343 261-62-00',
-                'address' => 'ул. Аппаратная, 10',
-            ],
-            [
-                'tel' => '+7 343 261-62-00',
-                'address' => 'ул. Аппаратная, 10',
-            ],
-            [
-                'tel' => '+7 343 261-62-00',
-                'address' => 'ул. Аппаратная, 10',
             ],
         ],
     ],
@@ -455,15 +397,15 @@ $response_data_service_centers = [
                             <div class="service-centers_address_item_form-wrapper">
                                 <button class="service-centers_address_item_btn-open-form" data-service-centers-address-item-btn-open-form>Список оказываемых услуг в данном автосервисе</button>
                                 <div class="service-centers_address_item_form_label-wrapper" data-service-centers-address-item-form-label-wrapper>
-                                    <a href="">Ремонт ходовой части</a>
-                                    <a href="">Услуги диагноста-автоэлектрика</a>
-                                    <a href="">Ремонт тормозной системы</a>
-                                    <a href="">Шиномонтаж</a>
-                                    <a href="">Ремонт рулевого управления</a>
-                                    <a href="">Зарядка и обслуживание аккумуляторов</a>
-                                    <a href="">Работы по техническому обслуживанию</a>
-                                    <a href="">Ремонт стартеров и генераторов</a>
-                                    <a href="">Регулировка углов установки колёс</a>
+                                    <a href="service-card.php">Ремонт ходовой части</a>
+                                    <a href="service-card.php">Услуги диагноста-автоэлектрика</a>
+                                    <a href="service-card.php">Ремонт тормозной системы</a>
+                                    <a href="service-card.php">Шиномонтаж</a>
+                                    <a href="service-card.php">Ремонт рулевого управления</a>
+                                    <a href="service-card.php">Зарядка и обслуживание аккумуляторов</a>
+                                    <a href="service-card.php">Работы по техническому обслуживанию</a>
+                                    <a href="service-card.php">Ремонт стартеров и генераторов</a>
+                                    <a href="service-card.php">Регулировка углов установки колёс</a>
                                 </div>
                                 <button class="service-centers_address_item_form_btn-submit" data-btn-appointment>Выбрать услугу и записаться</button>
                             </div>
@@ -488,15 +430,15 @@ $response_data_service_centers = [
                                 <div class="service-centers_address_item_form-wrapper">
                                     <button class="service-centers_address_item_btn-open-form" data-service-centers-address-item-btn-open-form>Список оказываемых услуг в данном автосервисе</button>
                                     <div class="service-centers_address_item_form_label-wrapper" data-service-centers-address-item-form-label-wrapper>
-                                        <a href="">Ремонт ходовой части</a>
-                                        <a href="">Услуги диагноста-автоэлектрика</a>
-                                        <a href="">Ремонт тормозной системы</a>
-                                        <a href="">Шиномонтаж</a>
-                                        <a href="">Ремонт рулевого управления</a>
-                                        <a href="">Зарядка и обслуживание аккумуляторов</a>
-                                        <a href="">Работы по техническому обслуживанию</a>
-                                        <a href="">Ремонт стартеров и генераторов</a>
-                                        <a href="">Регулировка углов установки колёс</a>
+                                        <a href="service-card.php">Ремонт ходовой части</a>
+                                        <a href="service-card.php">Услуги диагноста-автоэлектрика</a>
+                                        <a href="service-card.php">Ремонт тормозной системы</a>
+                                        <a href="service-card.php">Шиномонтаж</a>
+                                        <a href="service-card.php">Ремонт рулевого управления</a>
+                                        <a href="service-card.php">Зарядка и обслуживание аккумуляторов</a>
+                                        <a href="service-card.php">Работы по техническому обслуживанию</a>
+                                        <a href="service-card.php">Ремонт стартеров и генераторов</a>
+                                        <a href="service-card.php">Регулировка углов установки колёс</a>
                                     </div>
                                     <button class="service-centers_address_item_form_btn-submit" data-btn-appointment>Выбрать услугу и записаться</button>
                                 </div>

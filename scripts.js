@@ -1,32 +1,36 @@
-new Swiper('.sale-swiper', {
-    loop: true,
-    spaceBetween: 30,
-    slidesPerView: 2,
-    navigation: {
-        nextEl: '.sale-swiper-button-next',
-        prevEl: '.sale-swiper-button-prev',
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            slideToClickedSlide: true,
+document.querySelectorAll('.sale-swiper').forEach((slider, index) => {
+    const swiper = document.querySelectorAll('.sale-swiper')[index]
+    const btnNext = document.querySelectorAll('.sale-swiper-button-next')[index]
+    const btnPrev = document.querySelectorAll('.sale-swiper-button-prev')[index]
+
+    new Swiper(swiper, {
+        spaceBetween: 30,
+        slidesPerView: 2,
+        navigation: {
+            nextEl: btnNext,
+            prevEl: btnPrev,
         },
-        768: {
-            slidesPerView: 1.5,
-            spaceBetween: 30,
-            slideToClickedSlide: true,
-        },
-        992: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-            slideToClickedSlide: true,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                slideToClickedSlide: true,
+            },
+            768: {
+                slidesPerView: 1.5,
+                spaceBetween: 30,
+                slideToClickedSlide: true,
+            },
+            992: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                slideToClickedSlide: true,
+            }
         }
-    }
-});
+    });
+})
 
 new Swiper('.our-big-team_swiper', {
-    loop: true,
     spaceBetween: 20,
     slidesPerView: 1.4,
     navigation: {
@@ -44,6 +48,16 @@ new Swiper('.our-big-team_swiper', {
             spaceBetween: 20,
             slideToClickedSlide: true,
         },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            slideToClickedSlide: true,
+        },
+        992: {
+            slidesPerView: 4,
+            spaceBetween: 24,
+            slideToClickedSlide: true,
+        }
     }
 });
 
@@ -497,9 +511,14 @@ document.addEventListener('click', e => {
         const hiddenEl = wrapper.querySelector('[data-question-hidden]');
         const container = wrapper.closest('[data-questions-items-wrapper]');
         const allItems = container.querySelectorAll('.active[data-question-hidden]');
+        const allBtn = container.querySelectorAll('.active[data-question-btn]');
 
+        btn.classList.toggle('active')
         hiddenEl.classList.toggle('active')
         allItems.forEach(item => {
+            item.classList.remove('active')
+        })
+        allBtn.forEach(item => {
             item.classList.remove('active')
         })
     }

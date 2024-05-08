@@ -10,7 +10,7 @@ require 'head.php';
     </span>
     <div class="error_btn-wrapper">
         <a class="error_btn" href="/">перейти На главную </a>
-        <a class="error_btn" href="services.php">перейти На главную</a>
+        <a class="error_btn" href="services.php">перейти к услугам </a>
     </div>
 </section>
 

@@ -10,7 +10,13 @@ breadcrumb([['url' => '', 'name' => 'О компании']]);
 
 
 <section class="core-container our-works">
-    <h1 class="our-works_header site-header">Ремонт ходовой части</h1>
+    <div class="our-works_header-wrapper">
+        <h1 class="our-works_header site-header">Мы компания 12ВОЛЬТ</h1>
+        <div class="our-works_btn-play-video-wrapper">
+            <p>Посмотреть видео <br> о компании</p>
+            <button class="our-works_btn-play-video"></button>
+        </div>
+    </div>
     <div class="our-works_content">
         <div class="our-works_item">
             <img class="our-works_item_background" src="/images/Vector 322.png" alt="icon">
@@ -257,19 +263,6 @@ $response_data_our_team = [
 
 <section class="core-container our-big-team">
     <h1 class="our-big-team_header site-header">Наша большая <br> команда</h1>
-    <div class="our-big-team_content">
-        <?php foreach ($response_data_our_team as $item) { ?>
-            <div class="our-big-team_item">
-                <img class="our-big-team_item_img" src="<?= $item['image'] ?>" alt="img">
-                <span class="our-big-team_item_name"><?= $item['name'] ?></span>
-                <p class="our-big-team_item_text">
-                    <span><?= $item['specialist'] ?></span>
-                    <?= $item['experience'] ?>
-                </p>
-            </div>
-        <?php } ?>
-    </div>
-    <div class="our-big-team_content_mobil">
         <div class="our-big-team_swiper">
             <div class="swiper-wrapper">
                 <?php foreach ($response_data_our_team as $item) { ?>
@@ -290,7 +283,6 @@ $response_data_our_team = [
             <div class="our-big-team_swiper-button-prev"></div>
             <div class="our-big-team_swiper-button-next"></div>
         </div>
-    </div>
 </section>
 
 
@@ -499,15 +491,15 @@ $response_data_service_centers = [
                                 <div class="service-centers_address_item_form-wrapper">
                                     <button class="service-centers_address_item_btn-open-form" data-service-centers-address-item-btn-open-form>Список оказываемых услуг в данном автосервисе</button>
                                     <div class="service-centers_address_item_form_label-wrapper" data-service-centers-address-item-form-label-wrapper>
-                                        <a href="">Ремонт ходовой части</a>
-                                        <a href="">Услуги диагноста-автоэлектрика</a>
-                                        <a href="">Ремонт тормозной системы</a>
-                                        <a href="">Шиномонтаж</a>
-                                        <a href="">Ремонт рулевого управления</a>
-                                        <a href="">Зарядка и обслуживание аккумуляторов</a>
-                                        <a href="">Работы по техническому обслуживанию</a>
-                                        <a href="">Ремонт стартеров и генераторов</a>
-                                        <a href="">Регулировка углов установки колёс</a>
+                                        <a href="service-card.php">Ремонт ходовой части</a>
+                                        <a href="service-card.php">Услуги диагноста-автоэлектрика</a>
+                                        <a href="service-card.php">Ремонт тормозной системы</a>
+                                        <a href="service-card.php">Шиномонтаж</a>
+                                        <a href="service-card.php">Ремонт рулевого управления</a>
+                                        <a href="service-card.php">Зарядка и обслуживание аккумуляторов</a>
+                                        <a href="service-card.php">Работы по техническому обслуживанию</a>
+                                        <a href="service-card.php">Ремонт стартеров и генераторов</a>
+                                        <a href="service-card.php">Регулировка углов установки колёс</a>
                                     </div>
                                     <button class="service-centers_address_item_form_btn-submit" data-btn-appointment>Выбрать услугу и записаться</button>
                                 </div>
@@ -532,15 +524,15 @@ $response_data_service_centers = [
                                 <div class="service-centers_address_item_form-wrapper">
                                     <button class="service-centers_address_item_btn-open-form" data-service-centers-address-item-btn-open-form>Список оказываемых услуг в данном автосервисе</button>
                                     <div class="service-centers_address_item_form_label-wrapper" data-service-centers-address-item-form-label-wrapper>
-                                        <a href="">Ремонт ходовой части</a>
-                                        <a href="">Услуги диагноста-автоэлектрика</a>
-                                        <a href="">Ремонт тормозной системы</a>
-                                        <a href="">Шиномонтаж</a>
-                                        <a href="">Ремонт рулевого управления</a>
-                                        <a href="">Зарядка и обслуживание аккумуляторов</a>
-                                        <a href="">Работы по техническому обслуживанию</a>
-                                        <a href="">Ремонт стартеров и генераторов</a>
-                                        <a href="">Регулировка углов установки колёс</a>
+                                        <a href="service-card.php">Ремонт ходовой части</a>
+                                        <a href="service-card.php">Услуги диагноста-автоэлектрика</a>
+                                        <a href="service-card.php">Ремонт тормозной системы</a>
+                                        <a href="service-card.php">Шиномонтаж</a>
+                                        <a href="service-card.php">Ремонт рулевого управления</a>
+                                        <a href="service-card.php">Зарядка и обслуживание аккумуляторов</a>
+                                        <a href="service-card.php">Работы по техническому обслуживанию</a>
+                                        <a href="service-card.php">Ремонт стартеров и генераторов</a>
+                                        <a href="service-card.php">Регулировка углов установки колёс</a>
                                     </div>
                                     <button class="service-centers_address_item_form_btn-submit" data-btn-appointment>Выбрать услугу и записаться</button>
                                 </div>
