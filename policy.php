@@ -9,7 +9,7 @@ breadcrumb([['url' => '', 'name' => 'Политика конфиденциаль
 ?>
 
 <section class="core-container policy-conf">
-    <p class="policy-conf_header">политика конфиденциальности</p>
+    <h1 class="policy-conf_header">политика конфиденциальности</h1>
     <div class="policy-conf_content">
         <span class="policy-conf_title">Данные заказа</span>
         <p>

@@ -263,7 +263,7 @@ $response_data_service_centers = [
 
 
 <section class="core-container service-centers" data-service-centers>
-    <h1 class="service-centers_header site-header">Сервисные <span>центры</span></h1>
+    <p class="service-centers_header site-header">Сервисные <span>центры</span></p>
     <div class="service-centers_content">
         <ul class="service-centers_city-btn-wrapper">
             <?php foreach ($response_data_service_centers as $key => $item) { ?>
@@ -357,7 +357,7 @@ $response_data_service_centers = [
 
 
 <section class="core-container our-centers">
-    <h1 class="our-centers_header site-header">Фотографии нашего центра <span>и&nbsp;процесса работы</span></h1>
+    <p class="our-centers_header site-header">Фотографии нашего центра <span>и&nbsp;процесса работы</span></p>
     <div class="our-centers_content">
         <img class="our-centers_img" src="/images/Rectangle 5471.png" alt="img">
         <img class="our-centers_img" src="/images/Rectangle 5473.png" alt="img">
@@ -370,7 +370,7 @@ $response_data_service_centers = [
 
 <section class="core-container feedback">
     <div class="feedback_container">
-        <h1 class="feedback_header site-header">Форма обратной связи</h1>
+        <p class="feedback_header site-header">Форма обратной связи</p>
         <img class="feedback_img" src="/images/094374fefa195448aba7c9bb3e1a2a8f.png" alt="img">
         <div class="feedback_form-wrapper">
             <form action="">

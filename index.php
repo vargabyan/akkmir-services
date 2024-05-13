@@ -45,7 +45,7 @@ $response_data_sale = [
 
 
 <section class="core-container sale">
-    <h1 class="sale_title site-header">Акции</h1>
+    <p class="sale_title site-header">Акции</p>
     <div class="sale_btn-wrapper">
         <div class="sale-swiper-button-prev"></div>
         <div class="sale-swiper-button-next"></div>
@@ -78,7 +78,7 @@ $response_data_sale = [
                 <button class="modal_btn-close" data-modal-for-sale-btn-close></button>
                 <div class="modal-for-sale-swiper_text-wrapper">
                     <span class="modal-for-sale-swiper_discount <?= $item['discount'] ? 'active' : '' ?>">скидка <?= $item['discount'] ?></span>
-                    <h1 class="modal-for-sale-swiper_title"><?= $item['title'] ?></h1>
+                    <p class="modal-for-sale-swiper_title"><?= $item['title'] ?></p>
                     <p class="modal-for-sale-swiper_text"><?= $item['text'] ?></p>
                     <button class="modal-for-sale-swiper_btn-appointment btn-yellow" data-modal-for-sale-swiper-btn-appointment>записаться</button>
                 </div>
@@ -87,10 +87,10 @@ $response_data_sale = [
             <div class="modal-for-sale-swiper_hidden_elements" data-modal-for-sale-swiper-hidden-elements>
                 <hr class="modal-for-sale-swiper_line" data-modal-for-sale-swiper-line>
                 <div class="modal_content" data-modal-content>
-                    <h1 class="modal_title">
+                    <p class="modal_title">
                         Запишитесь в автосервис в удобном для вас городе
                         <span>Наш менеджер свяжется с вами в ближайшее время для уточнения деталей заявки</span>
-                    </h1>
+                    </p>
                     <form class="modal_form" action="">
                         <div class="modal_form_special_item-wrapper">
                             <div class="contacts_form_item" data-select-wrapper>
@@ -158,10 +158,10 @@ $response_data_sale = [
                 </div>
                 <div class="modal_content_success" data-modal-success-content>
                     <button class="modal_btn-close" data-modal-for-sale-btn-close></button>
-                    <h1 class="modal_title">
+                    <p class="modal_title">
                         Ваша заявка успешно отправлена!
                         <span>Мы перезвоним Вам в ближайшее время</span>
-                    </h1>
+                    </p>
                     <span class="modal_content_success_icon"></span>
                 </div>
             </div>
@@ -204,7 +204,7 @@ $response_data_services = [
 
 <section class="services-wrapper" data-services-wrapper>
     <div class="core-container services">
-        <h1 class="site-header">Услуги</h1>
+        <p class="site-header">Услуги</p>
         <?php foreach ($response_data_services as $item) { ?>
             <a class="services_item" href="/service-card.php" data-services-item>
                 <img class="services_item_background" src="/images/Vector 348.png" alt="icon">
@@ -225,7 +225,7 @@ $response_data_services = [
 
 <section class="core-container">
     <section class="make-an-appointment">
-        <h1 class="make-an-appointment_title site-header">Хочешь записаться на ремонт или ТО</h1>
+        <p class="make-an-appointment_title site-header">Хочешь записаться на ремонт или ТО</p>
         <img class="make-an-appointment_img" src="/images/snapedit_1711452112239 1.png" alt="img">
         <button class="make-an-appointment_btn" data-btn-appointment>Выбрать автосервис</button>
     </section>
@@ -361,7 +361,7 @@ $response_data_service_centers = [
 
 
 <section class="core-container service-centers" data-service-centers>
-    <h1 class="service-centers_header site-header">Сервисные <span>центры</span></h1>
+    <p class="service-centers_header site-header">Сервисные <span>центры</span></p>
     <div class="service-centers_content">
         <ul class="service-centers_city-btn-wrapper">
             <?php foreach ($response_data_service_centers as $key => $item) { ?>
@@ -455,7 +455,7 @@ $response_data_service_centers = [
 
 
 <section class="core-container diagnostics">
-    <h1 class="diagnostics_header site-header"><span>Почему</span> автовладельцы доверяют диагностику автомобиля <span>нашим мастерам</span></h1>
+    <p class="diagnostics_header site-header"><span>Почему</span> автовладельцы доверяют диагностику автомобиля <span>нашим мастерам</span></p>
     <div class="diagnostics_items-wrapper">
         <div class="diagnostics_item">
             <span class="diagnostics_item_title">Сбоственный магазин автозапчастей</span>
@@ -528,7 +528,7 @@ $response_data_reviews = [
 <section class="reviews">
     <div class="core-container sale">
         <div class="reviews_header-wrapper">
-            <h1 class="sale_title site-header">Отзывы</h1>
+            <p class="sale_title site-header">Отзывы</p>
             <div class="reviews_total-value"><span></span>4.87</div>
         </div>
         <div class="sale_btn-wrapper">
@@ -562,7 +562,7 @@ $response_data_reviews = [
 
 
 <section class="core-container about-company">
-    <h1 class="about-company_header site-header"><span>о компании</span> Мы компания 12&nbsp;ВОЛЬТ <span>радуем своих клиентов</span> с 2010 года</h1>
+    <p class="about-company_header site-header"><span>о компании</span> Мы компания 12&nbsp;ВОЛЬТ <span>радуем своих клиентов</span> с 2010 года</p>
     <div class="about-company_content">
         <div class="about-company_about-us">
             <p class="about-company_about-us_title">Рассказываем о себе и своем опыте</p>
@@ -605,7 +605,7 @@ $response_data_questions = [
 
 <section class="questions-wrapper">
     <div class="core-container questions">
-        <h1 class="site-header questions_header">Ответы <br> на вопросы</h1>
+        <p class="site-header questions_header">Ответы <br> на вопросы</p>
         <div class="questions_content">
             <img class="questions_core_img" src="/images/094374fefa195448aba7c9bb3e1a2a8f.png" alt="img">
             <div class="questions_items-wrapper" data-questions-items-wrapper>
