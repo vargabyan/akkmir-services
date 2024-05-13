@@ -1,10 +1,10 @@
 <section class="modal-wrapper" data-modal-wrapper data-modal-appointment>
     <div class="modal_content" data-modal-content>
         <button class="modal_btn-close" data-modal-btn-close></button>
-        <p class="modal_title">
+        <h2 class="modal_title">
             Запишитесь в автосервис в удобном для вас городе
             <span>Наш менеджер свяжется с вами в ближайшее время для уточнения деталей заявки</span>
-        </p>
+        </h2>
         <form class="modal_form" action="">
             <div class="modal_form_special_item-wrapper">
                 <div class="contacts_form_item" data-select-wrapper>
@@ -72,10 +72,10 @@
     </div>
     <div class="modal_content_success" data-modal-success-content>
         <button class="modal_btn-close" data-modal-btn-close></button>
-        <p class="modal_title">
+        <h2 class="modal_title">
             Ваша заявка успешно отправлена!
             <span>Мы перезвоним Вам в ближайшее время</span>
-        </p>
+        </h2>
         <span class="modal_content_success_icon"></span>
     </div>
 </section>
@@ -84,9 +84,9 @@
 <section class="modal-wrapper" data-modal-wrapper data-modal-ask-question>
     <div class="modal_content" data-modal-content>
         <button class="modal_btn-close" data-modal-btn-close></button>
-        <p class="modal_title">
+        <h2 class="modal_title">
             Задайте свой вопрос опытному специалисту
-        </p>
+        </h2>
         <form class="modal_form" action="">
 
             <label class="modal_form_label-core">
@@ -113,10 +113,10 @@
     </div>
     <div class="modal_content_success" data-modal-success-content>
         <button class="modal_btn-close" data-modal-btn-close></button>
-        <p class="modal_title">
+        <h2 class="modal_title">
             Ваша заявка успешно отправлена!
             <span>Мы перезвоним Вам в ближайшее время</span>
-        </p>
+        </h2>
         <span class="modal_content_success_icon"></span>
     </div>
 </section>
@@ -125,9 +125,9 @@
 <section class="modal-wrapper" data-modal-wrapper data-modal-request-a-call>
     <div class="modal_content" data-modal-content>
         <button class="modal_btn-close" data-modal-btn-close></button>
-        <p class="modal_title">
+        <h2 class="modal_title">
             Заказать звонок
-        </p>
+        </h2>
         <form class="modal_form" action="">
 
             <label class="modal_form_label-core">
@@ -150,10 +150,10 @@
     </div>
     <div class="modal_content_success" data-modal-success-content>
         <button class="modal_btn-close" data-modal-btn-close></button>
-        <p class="modal_title">
+        <h2 class="modal_title">
             Ваша заявка успешно отправлена!
             <span>Мы перезвоним Вам в ближайшее время</span>
-        </p>
+        </h2>
         <span class="modal_content_success_icon"></span>
     </div>
 </section>
@@ -178,9 +178,9 @@ $response_data_cities = [
 <section class="modal-wrapper" data-modal-wrapper data-modal-select-city>
     <div class="modal_content" data-modal-content>
         <button class="modal_btn-close" data-modal-btn-close></button>
-        <p class="modal_title">
+        <h2 class="modal_title">
             Выберите <br> свой город
-        </p>
+        </h2>
         <label class="modal_label-input-search">
             <input type="text" placeholder="поиск" data-modal-select-cit-search-input>
         </label>

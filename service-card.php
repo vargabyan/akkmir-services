@@ -13,12 +13,12 @@ breadcrumb([['url' => '/services.php', 'name' => 'Услуги'], ['url' => '', 
     <h1 class="our-works_header site-header">Ремонт ходовой части</h1>
     <div class="our-works_content">
         <div class="our-works_item">
-            <img class="our-works_item_background" src="/images/Vector 322.png" alt="icon">
+            <img class="our-works_item_background" src="/images/border-icon-1.png" alt="icon">
             <p class="our-works_title">Радуем своих клиентов</p>
             <span>с 2016</span>
         </div>
         <div class="our-works_item">
-            <img class="our-works_item_background" src="/images/Vector 322.png" alt="icon">
+            <img class="our-works_item_background" src="/images/border-icon-2.png" alt="icon">
             <p class="our-works_title">Чиним машин в неделю</p>
             <span>210</span>
         </div>
@@ -28,20 +28,20 @@ breadcrumb([['url' => '/services.php', 'name' => 'Услуги'], ['url' => '', 
                 <p class="our-works_select-car-service_title">Выбрать автосервис и&nbsp;записаться на услугу</p>
                 <button class="our-works_select-car-service_btn btn-yellow" data-btn-appointment>Записаться <span>в автосервис</span></button>
             </div>
-            <img class="our-works_select-car-service_img" src="/images/Vector 344.png" alt="img">
-            <img class="our-works_select-car-service_img" src="/images/Vector 368.png" alt="img">
+            <img class="our-works_select-car-service_img" src="/images/servis-page-image-1.png" alt="img">
+            <img class="our-works_select-car-service_img" src="/images/servis-page-image-2.png" alt="img">
         </div>
     </div>
 </section>
 
 
 <section class="core-container prices">
-    <p class="prices_header site-header">Цены <span>*стоимость может варьироваться в зависимости от марки автомобилей</span></p>
+    <h2 class="prices_header site-header">Цены <span>*стоимость может варьироваться в зависимости от марки автомобилей</span></h2>
     <div class="prices_content">
         <?php foreach ([1,2,3,4] as $item) { ?>
             <div class="prices_item">
-                <img class="prices_item-background" src="/images/Vector 365.png" alt="icon">
-                <img class="prices_item-background" src="/images/Vector 368_.png" alt="icon">
+                <img class="prices_item-background" src="/images/border-icon-3.png" alt="icon">
+                <img class="prices_item-background" src="/images/border-icon-4.png" alt="icon">
                 <p class="prices_item_title">
                     <span>Обслуживание аккумулятора</span>
                     Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.
@@ -58,7 +58,7 @@ breadcrumb([['url' => '/services.php', 'name' => 'Услуги'], ['url' => '', 
 
 $response_data_sale = [
     [
-        'image' =>  '/images/f456d721d16987e0a0d52404d32b06df.png',
+        'image' =>  '/images/image-for-slider-1.png',
         'title' =>  'Ремонт проколов и порезов',
         'subtitle' =>  'Вулканизация шин',
         'discount' =>  '20%',
@@ -67,7 +67,7 @@ $response_data_sale = [
 Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.',
     ],
     [
-        'image' =>  '/images/1bc96a447f4ae50a09b85f369d4cf5c8.png',
+        'image' =>  '/images/image-for-slider-2.png',
         'title' =>  'Замена пасла в двигателе в подарок',
         'subtitle' =>  'При покупке от 4-х дитров моторного масла и масляного фильтра в наших магазинах',
         'discount' =>  '',
@@ -76,20 +76,11 @@ $response_data_sale = [
 Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.',
     ],
     [
-        'image' =>  '/images/f456d721d16987e0a0d52404d32b06df.png',
+        'image' =>  '/images/image-for-slider-1.png',
         'title' =>  'Ремонт проколов и порезов',
         'subtitle' =>  'Вулканизация шин',
         'discount' =>  '20%',
-        'id' => '2j6fgh6df564',
-        'text' => 'Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.
-Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.',
-    ],
-    [
-        'image' =>  '/images/1bc96a447f4ae50a09b85f369d4cf5c8.png',
-        'title' =>  'Замена пасла в двигателе в подарок',
-        'subtitle' =>  'При покупке от 4-х дитров моторного масла и масляного фильтра в наших магазинах',
-        'discount' =>  '',
-        'id' => '8s65sd65fg45',
+        'id' => '2gf6df65fd6fd65',
         'text' => 'Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.
 Если аккумулятор вашего устройства потерял свою емкость или вовсе не работает, мы сможем восстановить его работоспособность с помощью специального оборудования.',
     ],
@@ -99,7 +90,7 @@ $response_data_sale = [
 
 
 <section class="core-container sale">
-    <p class="sale_title site-header">Акции</p>
+    <h2 class="sale_title site-header">Акции</h2>
     <div class="sale_btn-wrapper">
         <div class="sale-swiper-button-prev"></div>
         <div class="sale-swiper-button-next"></div>
@@ -132,7 +123,7 @@ $response_data_sale = [
                 <button class="modal_btn-close" data-modal-for-sale-btn-close></button>
                 <div class="modal-for-sale-swiper_text-wrapper">
                     <span class="modal-for-sale-swiper_discount <?= $item['discount'] ? 'active' : '' ?>">скидка <?= $item['discount'] ?></span>
-                    <p class="modal-for-sale-swiper_title"><?= $item['title'] ?></p>
+                    <h2 class="modal-for-sale-swiper_title"><?= $item['title'] ?></h2>
                     <p class="modal-for-sale-swiper_text"><?= $item['text'] ?></p>
                     <button class="modal-for-sale-swiper_btn-appointment btn-yellow" data-modal-for-sale-swiper-btn-appointment>записаться</button>
                 </div>
@@ -141,10 +132,10 @@ $response_data_sale = [
             <div class="modal-for-sale-swiper_hidden_elements" data-modal-for-sale-swiper-hidden-elements>
                 <hr class="modal-for-sale-swiper_line" data-modal-for-sale-swiper-line>
                 <div class="modal_content" data-modal-content>
-                    <p class="modal_title">
+                    <h2 class="modal_title">
                         Запишитесь в автосервис в удобном для вас городе
                         <span>Наш менеджер свяжется с вами в ближайшее время для уточнения деталей заявки</span>
-                    </p>
+                    </h2>
                     <form class="modal_form" action="">
                         <div class="modal_form_special_item-wrapper">
                             <div class="contacts_form_item" data-select-wrapper>
@@ -212,10 +203,10 @@ $response_data_sale = [
                 </div>
                 <div class="modal_content_success" data-modal-success-content>
                     <button class="modal_btn-close" data-modal-for-sale-btn-close></button>
-                    <p class="modal_title">
+                    <h2 class="modal_title">
                         Ваша заявка успешно отправлена!
                         <span>Мы перезвоним Вам в ближайшее время</span>
-                    </p>
+                    </h2>
                     <span class="modal_content_success_icon"></span>
                 </div>
             </div>
@@ -393,7 +384,7 @@ $response_data_service_centers = [
 
 
 <section class="core-container service-centers" data-service-centers>
-    <p class="service-centers_header site-header">Сервисные <span>центры</span></p>
+    <h2 class="service-centers_header site-header">Сервисные <span>центры</span></h2>
     <div class="service-centers_content">
         <ul class="service-centers_city-btn-wrapper">
             <?php foreach ($response_data_service_centers as $key => $item) { ?>
@@ -415,8 +406,8 @@ $response_data_service_centers = [
                     <div class="service-centers_address active" data-service-centers-city-address-id="<?= $item['id'] ?>">
                         <?php foreach ($item['contacts'] as $contact) { ?>
                             <div class="service-centers_address_item" data-service-centers-address-item>
-                                <img class="service-centers_address_item-background" src="/images/Vector 355.png" alt="img" data-service-centers-address-item-background>
-                                <img class="service-centers_address_item-background active" src="/images/Vector 356.png" alt="img" data-service-centers-address-item-background>
+                                <img class="service-centers_address_item-background" src="/images/border-icon-5.png" alt="img" data-service-centers-address-item-background>
+                                <img class="service-centers_address_item-background active" src="/images/border-icon-6.png" alt="img" data-service-centers-address-item-background>
                                 <div class="service-centers_address_item_head">
                                     <p class="service-centers_address_item_address">
                                         <span>екатеринбург</span>
@@ -448,8 +439,8 @@ $response_data_service_centers = [
                     <div class="service-centers_address" data-service-centers-city-address-id="<?= $item['id'] ?>">
                         <?php foreach ($item['contacts'] as $contact) { ?>
                             <div class="service-centers_address_item" data-service-centers-address-item>
-                                <img class="service-centers_address_item-background" src="/images/Vector 355.png" alt="img" data-service-centers-address-item-background>
-                                <img class="service-centers_address_item-background active" src="/images/Vector 356.png" alt="img" data-service-centers-address-item-background>
+                                <img class="service-centers_address_item-background" src="/images/border-icon-5.png" alt="img" data-service-centers-address-item-background>
+                                <img class="service-centers_address_item-background active" src="/images/border-icon-6.png" alt="img" data-service-centers-address-item-background>
                                 <div class="service-centers_address_item_head">
                                     <p class="service-centers_address_item_address">
                                         <span>екатеринбург</span>
@@ -488,7 +479,7 @@ $response_data_service_centers = [
 
 <section class="core-container service-center">
     <div class="service-center_title-wrapper">
-        <p class="site-header service-center_header">Сервисный центр</p>
+        <h2 class="site-header service-center_header">Сервисный центр</h2>
         <p class="service-center_description">Сервисные центры 12Вольт всегда стремятся превосходить ожидания наших клиентов в отношении качества и исключительного обслуживания, мы гарантированно обеспечим отличное состояние, стабильную и бесперебойную работу вашего автомобиля.</p>
     </div>
     <div class="service-center_items-wrapper">
@@ -534,7 +525,7 @@ $response_data_reviews = [
 <section class="reviews">
     <div class="core-container sale">
         <div class="reviews_header-wrapper">
-            <p class="sale_title site-header">Отзывы</p>
+            <h2 class="sale_title site-header">Отзывы</h2>
             <div class="reviews_total-value"><span></span>4.87</div>
         </div>
         <div class="sale_btn-wrapper">
@@ -572,15 +563,15 @@ $response_data_reviews = [
 $response_data_questions = [
     [
         'question' => 'Как долго длится обслуживание одного автомобиля?',
-        'answer' => '',
+        'answer' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,',
     ],
     [
         'question' => 'Сколько стоят ваши услуги?',
-        'answer' => '',
+        'answer' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,',
     ],
     [
         'question' => 'Предоставляете ли вы гарантию на свои услуги?',
-        'answer' => '',
+        'answer' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,',
     ],
 ]
 
@@ -589,7 +580,7 @@ $response_data_questions = [
 
 <section class="questions-wrapper">
     <div class="core-container questions">
-        <p class="site-header questions_header">Ответы <br> на вопросы</p>
+        <h2 class="site-header questions_header">Ответы <br> на вопросы</h2>
         <div class="questions_content">
             <img class="questions_core_img" src="/images/094374fefa195448aba7c9bb3e1a2a8f.png" alt="img">
             <div class="questions_items-wrapper" data-questions-items-wrapper>
@@ -601,7 +592,7 @@ $response_data_questions = [
                         </div>
                         <div class="questions_item_answer" data-question-hidden>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                <?= $item['answer'] ?>
                             </p>
                         </div>
                     </div>

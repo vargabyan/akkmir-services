@@ -263,7 +263,7 @@ $response_data_service_centers = [
 
 
 <section class="core-container service-centers" data-service-centers>
-    <p class="service-centers_header site-header">Сервисные <span>центры</span></p>
+    <h2 class="service-centers_header site-header">Сервисные <span>центры</span></h2>
     <div class="service-centers_content">
         <ul class="service-centers_city-btn-wrapper">
             <?php foreach ($response_data_service_centers as $key => $item) { ?>
@@ -285,8 +285,8 @@ $response_data_service_centers = [
                     <div class="service-centers_address active" data-service-centers-city-address-id="<?= $item['id'] ?>">
                         <?php foreach ($item['contacts'] as $contact) { ?>
                             <div class="service-centers_address_item" data-service-centers-address-item>
-                                <img class="service-centers_address_item-background" src="/images/Vector 355.png" alt="img" data-service-centers-address-item-background>
-                                <img class="service-centers_address_item-background active" src="/images/Vector 356.png" alt="img" data-service-centers-address-item-background>
+                                <img class="service-centers_address_item-background" src="/images/border-icon-5.png" alt="img" data-service-centers-address-item-background>
+                                <img class="service-centers_address_item-background active" src="/images/border-icon-6.png" alt="img" data-service-centers-address-item-background>
                                 <div class="service-centers_address_item_head">
                                     <p class="service-centers_address_item_address">
                                         <span>екатеринбург</span>
@@ -318,8 +318,8 @@ $response_data_service_centers = [
                     <div class="service-centers_address" data-service-centers-city-address-id="<?= $item['id'] ?>">
                         <?php foreach ($item['contacts'] as $contact) { ?>
                             <div class="service-centers_address_item" data-service-centers-address-item>
-                                <img class="service-centers_address_item-background" src="/images/Vector 355.png" alt="img" data-service-centers-address-item-background>
-                                <img class="service-centers_address_item-background active" src="/images/Vector 356.png" alt="img" data-service-centers-address-item-background>
+                                <img class="service-centers_address_item-background" src="/images/border-icon-5.png" alt="img" data-service-centers-address-item-background>
+                                <img class="service-centers_address_item-background active" src="/images/border-icon-6.png" alt="img" data-service-centers-address-item-background>
                                 <div class="service-centers_address_item_head">
                                     <p class="service-centers_address_item_address">
                                         <span>екатеринбург</span>
@@ -357,20 +357,20 @@ $response_data_service_centers = [
 
 
 <section class="core-container our-centers">
-    <p class="our-centers_header site-header">Фотографии нашего центра <span>и&nbsp;процесса работы</span></p>
+    <h2 class="our-centers_header site-header">Фотографии нашего центра <span>и&nbsp;процесса работы</span></h2>
     <div class="our-centers_content">
-        <img class="our-centers_img" src="/images/Rectangle 5471.png" alt="img">
-        <img class="our-centers_img" src="/images/Rectangle 5473.png" alt="img">
-        <img class="our-centers_img" src="/images/Rectangle 5472.png" alt="img">
-        <img class="our-centers_img" src="/images/Rectangle 5474.png" alt="img">
-        <img class="our-centers_img" src="/images/Rectangle 5475.png" alt="img">
+        <img class="our-centers_img" src="/images/our-centers-image-1.png" alt="img">
+        <img class="our-centers_img" src="/images/our-centers-image-2.png" alt="img">
+        <img class="our-centers_img" src="/images/our-centers-image-3.png" alt="img">
+        <img class="our-centers_img" src="/images/our-centers-image-4.png" alt="img">
+        <img class="our-centers_img" src="/images/our-centers-image-5.png" alt="img">
     </div>
 </section>
 
 
 <section class="core-container feedback">
     <div class="feedback_container">
-        <p class="feedback_header site-header">Форма обратной связи</p>
+        <h2 class="feedback_header site-header">Форма обратной связи</h2>
         <img class="feedback_img" src="/images/094374fefa195448aba7c9bb3e1a2a8f.png" alt="img">
         <div class="feedback_form-wrapper">
             <form action="">
