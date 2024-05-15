@@ -331,7 +331,7 @@ document.addEventListener('click', e => {
 
 
 document.addEventListener('click', e => {
-    const btn = e.target.closest('[data-btn-select-city]');
+    const btn = e.target.closest('[data-btn-select-city-btn]');
 
     if (btn) {
         const modalWrapper = document.querySelector('[data-modal-select-city]');

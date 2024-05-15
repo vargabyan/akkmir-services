@@ -20,7 +20,7 @@
         </a>
         <div class="header_select-city-wrapper">
             <p class="header_working-hours">С 8:00 до 21:00</p>
-            <div class="header_city_label">
+            <div class="header_city_label" data-btn-select-city-btn>
                 <span class="header_city-name" data-btn-select-city>Екатеринбург</span>
             </div>
         </div>
