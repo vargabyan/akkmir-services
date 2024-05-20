@@ -203,6 +203,25 @@ document.addEventListener('click', e => {
 })
 
 document.addEventListener('click', e => {
+    const btm = e.target.getAttribute('data-modal-wrapper');
+
+    if (btm !== null) {
+        const modalWrapper = e.target.closest('[data-modal-wrapper]');
+        const content = modalWrapper.querySelector('[data-modal-content]');
+
+        modalWrapper.classList.remove('active');
+        content.classList.remove('active');
+        document.querySelector('body').style['overflow'] = '';
+
+        const successContent = modalWrapper.querySelector('[data-modal-success-content]');
+
+        if (successContent) {
+            successContent.classList.remove('active');
+        }
+    }
+})
+
+document.addEventListener('click', e => {
     const btn = e.target.closest('[data-btn-ask-question]');
 
     if (btn) {
