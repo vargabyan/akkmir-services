@@ -5,14 +5,11 @@
                 <p class="footer_logo-name">ВОЛЬТ</p>
                 <span>Сервисный центр</span>
             </a>
-            <form action="" class="footer_select-city-wrapper">
-                <label class="footer_city_label">
-                    <span class="footer_city-name">Екатеринбург</span>
-                    <select class="footer_city_select" name="" id="">
-                        <option value="Екатеринбург">Екатеринбург</option>
-                    </select>
-                </label>
-            </form>
+            <div class="footer_select-city-wrapper">
+                <div class="header_city_label" data-btn-select-city-btn>
+                    <span class="header_city-name" data-btn-select-city>Екатеринбург</span>
+                </div>
+            </div>
             <a class="footer_tel" href="tel:+7343261-62-62">
                 +7 343 261-62-62
                 <span>Заказать звонок</span>
@@ -54,5 +51,9 @@ require 'popups.php';
 
 <script src="swiper-bundle.min.js"></script>
 <script src="scripts.js"></script>
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+<script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
+<script src="scripts-map.js"></script>
 </body>
 </html>

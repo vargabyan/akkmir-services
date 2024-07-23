@@ -544,5 +544,77 @@ document.addEventListener('click', e => {
 })
 
 
+document.addEventListener('input', e => {
+    const btn = e.target.closest('[data-select-contacts-city]');
+
+    if (btn) {
+        const btnValue = btn.value;
+
+        document.querySelectorAll(`[data-select-collection-city-id]`).forEach( item => {
+            item.classList.remove('active')
+            item.classList.remove('active-first')
+        })
+        document.querySelector(`[data-select-collection-city-id="${btnValue}"]`).classList.add('active')
+
+        document.querySelectorAll('[data-select-collection-city-id] input').forEach( item => {
+            const wrapper = item.closest('[data-select-wrapper]');
+            const selectValue = wrapper.querySelector('[data-select-value-and-btn]');
+
+            item.checked = false;
+            selectValue.classList.remove('active')
+            selectValue.textContent = 'ул. Шефская 95А'
+        })
+        document.querySelectorAll('[data-select-collection-address-id] input').forEach( item => {
+            const wrapper = item.closest('[data-select-wrapper]');
+            const selectValue = wrapper.querySelector('[data-select-value-and-btn]');
+
+            item.checked = false;
+            selectValue.classList.remove('active')
+            selectValue.textContent = 'Замена аккумулятора'
+        })
+    }
+})
+
+document.addEventListener('input', e => {
+    const btn = e.target.closest('[data-select-contacts-address]');
+
+    if (btn) {
+        const btnValue = btn.value;
+
+        document.querySelectorAll(`[data-select-collection-address-id]`).forEach( item => {
+            item.classList.remove('active')
+            item.classList.remove('active-first')
+        })
+        document.querySelector(`[data-select-collection-address-id="${btnValue}"]`).classList.add('active')
+
+        document.querySelectorAll('[data-select-collection-address-id] input').forEach( item => {
+            const wrapper = item.closest('[data-select-wrapper]');
+            const selectValue = wrapper.querySelector('[data-select-value-and-btn]');
+
+            item.checked = false;
+            selectValue.classList.remove('active')
+            selectValue.textContent = 'Замена аккумулятора'
+        })
+    }
+})
+
+
+document.addEventListener('input', e => {
+    const form = e.target.closest('[data-contacts-form]');
+
+    if (form) {
+        const btn = form.querySelector('[data-contacts-form-submit]');
+        const city = form.querySelector('[data-contacts-form-city] input:checked');
+        const address = form.querySelector('[data-contacts-form-address] input:checked');
+        const service = form.querySelector('[data-contacts-form-services] input:checked');
+        const fullName = form.querySelector('[data-contacts-form-name]').value;
+        const tel = form.querySelector('[data-contacts-form-tel]').value;
+
+        if (city && address && service && fullName && tel) {
+            btn.disabled = false;
+        }
+    }
+})
+
 
 

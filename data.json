@@ -1,0 +1,13 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {"type": "Feature", "id": 0, "geometry": {"type": "Point", "coordinates": [55.831342, 37.411741]}, "properties": {"coordinatesForBalloon": [55.831342, 37.411741],"tel": "+7 343 261-62-61", "city": "Москва", "address": "1-й Тушинский проезд, вл23", "services": ["Ремонт тормозной системы 1", "Ремонт тормозной системы 2"]}},
+        {"type": "Feature", "id": 1, "geometry": {"type": "Point", "coordinates": [55.763338, 37.565466]}, "properties": {"coordinatesForBalloon": [55.763338, 37.565466],"tel": "+7 343 261-62-62", "city": "Москва", "address": "улица Красная Пресня, 44с2", "services": ["Ремонт тормозной системы 1"]}},
+        {"type": "Feature", "id": 3, "geometry": {"type": "Point", "coordinates": [55.744992, 37.615075]}, "properties": {"coordinatesForBalloon": [55.744992, 37.615075],"tel": "+7 343 261-62-64", "city": "Москва", "address": "улица Серафимовича, 5/16", "services": ["Ремонт тормозной системы 1", "Ремонт тормозной системы 2"]}},
+        {"type": "Feature", "id": 4, "geometry": {"type": "Point", "coordinates": [55.781241, 37.643929]}, "properties": {"coordinatesForBalloon": [55.781241, 37.643929],"tel": "+7 343 261-62-65", "city": "Москва", "address": "Большая Переяславская улица, 6к1", "services": ["Ремонт тормозной системы 1"]}},
+        {"type": "Feature", "id": 5, "geometry": {"type": "Point", "coordinates": [55.790312, 37.449012]}, "properties": {"coordinatesForBalloon": [55.790312, 37.449012],"tel": "+7 343 261-62-66", "city": "Москва", "address": "Живописная улица, 21к2", "services": ["Ремонт тормозной системы 1", "Ремонт тормозной системы 2"]}},
+        {"type": "Feature", "id": 6, "geometry": {"type": "Point", "coordinates": [55.800584, 37.675638]}, "properties": {"coordinatesForBalloon": [55.800584, 37.675638],"tel": "+7 343 261-62-67", "city": "Москва", "address": "5-й Лучевой просек, 7с6", "services": ["Ремонт тормозной системы 1"]}},
+        {"type": "Feature", "id": 7, "geometry": {"type": "Point", "coordinates": [55.718288, 37.592105]}, "properties": {"coordinatesForBalloon": [55.718288, 37.592105],"tel": "+7 343 261-62-68", "city": "Москва", "address": "Ленинский проспект, 20к4", "services": ["Ремонт тормозной системы 1", "Ремонт тормозной системы 2"]}},
+        {"type": "Feature", "id": 8, "geometry": {"type": "Point", "coordinates": [56.809157, 60.550391]}, "properties": {"coordinatesForBalloon": [56.809157, 60.550391],"tel": "+7 343 261-62-68", "city": "г. Екатеринбург", "address": "ул. Академика Бардина, 4А", "services": ["Ремонт тормозной системы 1"]}}
+    ]
+}

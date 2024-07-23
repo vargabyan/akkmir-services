@@ -539,6 +539,19 @@ $response_data_service_centers = [
 </section>
 
 
+<section class="core-container service-center">
+    <div class="service-center_title-wrapper">
+        <h2 class="site-header service-center_header">Сервисный центр</h2>
+        <p class="service-center_description">Сервисные центры 12Вольт всегда стремятся превосходить ожидания наших клиентов в отношении качества и исключительного обслуживания, мы гарантированно обеспечим отличное состояние, стабильную и бесперебойную работу вашего автомобиля.</p>
+    </div>
+    <div class="service-center_items-wrapper">
+        <p>Высокое качество запчастей<span>Оригинальные запчасти и качественные аналоги в наличии</span></p>
+        <p>Уютная клиентская зона<span>В нашем автосервисе Вы можете выпить чашечку чая, посмотреть TV. Wi-Fi free</span></p>
+        <p>Соблюдение сроков ремонта<span>При приеме автомобиля в ремонт составляется акт со сроком выдачи автомобиля</span></p>
+    </div>
+</section>
+
+
 <?php
 
 $response_data_reviews = [
