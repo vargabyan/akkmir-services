@@ -1,15 +1,13 @@
 function init() {
     const coreMap = new ymaps.Map('map', {
-        center: [55.751574, 37.573856],
-        zoom: 10,
+        center: [56.8, 60.6],
+        zoom: 11,
     }, {
         searchControlProvider: 'yandex#search',
     })
 
     const objectManager = new ymaps.ObjectManager({
-        // Чтобы метки начали кластеризоваться, выставляем опцию.
         clusterSize: true,
-        // ObjectManager принимает те же опции, что и кластеризатор.
         gridSize: 32,
         clusterDisableClickZoom: true,
     });
@@ -28,7 +26,7 @@ function init() {
             '                                <span>{{ properties.address }}</span>\n' +
             '                            </p>\n' +
             '                            <p class="map-marker_description_working-hours">\n' +
-            '                                <span>С 8:00 до 21:00</span> без выходных\n' +
+            '                                {{ properties.workHours }}\n' +
             '                            </p>\n' +
             '                        </div>\n' +
             '                    </div>\n' +
@@ -54,6 +52,39 @@ function init() {
                 iconImageHref: 'images/map-icon.svg' // Путь к исходной иконке
             });
         }
+    });
+
+    objectManager.objects.events.add(['click'], function (e) {
+        const objectId = e.get('objectId');
+        const currentMarker = objectManager.objects.getById(objectId);
+
+        const citySelector = document.querySelector('[data-contacts-form-city]')
+        const citySelectorWrapper = citySelector.closest('[data-select-wrapper]')
+        const citySelectorInput = citySelectorWrapper.querySelectorAll('[data-select-wrapper] input')
+
+        citySelectorInput.forEach( item => {
+            if (item.value === currentMarker.properties.city) {
+                item.checked = true;
+                citySelectorWrapper.querySelector('[data-select-value-and-btn]').textContent = currentMarker.properties.city;
+                citySelectorWrapper.querySelector('[data-select-value-and-btn]').classList.add('active');
+            } else {
+                item.checked = false;
+            }
+        })
+
+        const addressSelector = document.querySelector('[data-contacts-form-address]')
+        const addressSelectorWrapper = addressSelector.closest('[data-select-wrapper]')
+        const addressSelectorInput = addressSelectorWrapper.querySelectorAll('[data-select-wrapper] input')
+
+        addressSelectorInput.forEach( item => {
+            if (item.value === currentMarker.properties.address) {
+                item.checked = true;
+                addressSelectorWrapper.querySelector('[data-select-value-and-btn]').textContent = currentMarker.properties.address;
+                addressSelectorWrapper.querySelector('[data-select-value-and-btn]').classList.add('active');
+            } else {
+                item.checked = false;
+            }
+        })
     });
 
 

@@ -12,19 +12,28 @@ breadcrumb([['url' => '', 'name' => 'контакты']]);
 $data = file_get_contents('data.json');
 $result = json_decode($data, true);
 $response_data_contacts = [];
+$key_value = [];
 
 foreach ($result['features'] as $item) {
-    if ($response_data_contacts) {
-        foreach ($response_data_contacts as $key => $city_item) {
-            if ($city_item['city'] !== $item['properties']['city']) {
-                array_push($response_data_contacts, ['city' => $item['properties']['city'], 'address' => [['name' => $item['properties']['address'], 'location' => $item['properties']['coordinatesForBalloon'], 'services' => $item['properties']['services'], 'tel' => $item['properties']['tel'] ]] ]);
-            } else {
-                array_push($response_data_contacts[$key]['address'], ['name' => $item['properties']['address'], 'location' => $item['properties']['coordinatesForBalloon'], 'services' => $item['properties']['services'], 'tel' => $item['properties']['tel'] ]);
-            }
+    if ($key_value) {
+        if (!in_array($item['properties']['city'], $key_value)) {
+            array_push($key_value, $item['properties']['city']);
         }
     }
     else {
-        array_push($response_data_contacts, ['city' => $item['properties']['city'], 'address' => [['name' => $item['properties']['address'], 'location' => $item['properties']['coordinatesForBalloon'], 'services' => $item['properties']['services'], 'tel' => $item['properties']['tel'] ]] ]);
+        array_push($key_value, $item['properties']['city']);
+    }
+}
+
+foreach ($key_value as $key_value_item) {
+    array_push($response_data_contacts, ['city' => $key_value_item, "address" => []]);
+}
+
+foreach ($result['features'] as $item) {
+    foreach ($response_data_contacts as $key => $city_item) {
+        if ($city_item['city'] === $item['properties']['city']) {
+            array_push($response_data_contacts[$key]['address'], ['name' => $item['properties']['address'], 'location' => $item['properties']['coordinatesForBalloon'], 'services' => $item['properties']['services'], 'tel' => $item['properties']['tel'] ]);
+        }
     }
 }
 ?>
