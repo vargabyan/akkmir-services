@@ -96,10 +96,6 @@ function init() {
 
             let found = false;
             objectManager.objects.each(function (object) {
-
-                console.log(object.geometry.coordinates);
-                console.log(address.split(', '));
-                console.log(object.geometry.coordinates[0], +address.split(', ')[0], object.geometry.coordinates[1], +address.split(', ')[1]);
                 if (object.geometry.coordinates[0] === +address.split(', ')[0] && object.geometry.coordinates[1] === +address.split(', ')[1]) {
                     coreMap.setCenter(object.geometry.coordinates, 14);
                     objectManager.objects.balloon.open(object.id);
