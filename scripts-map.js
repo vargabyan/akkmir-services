@@ -30,7 +30,7 @@ function init() {
             '                            </p>\n' +
             '                        </div>\n' +
             '                    </div>\n' +
-            '                    <a class="map-marker_description_tel" href="{{ properties.tel }}">{{ properties.tel }}</a>\n' +
+            '                    <a class="map-marker_description_tel" href="tel:{{ properties.tel }}">{{ properties.tel }}</a>\n' +
             '                    <div class="map-marker_description_footer">\n' +
             // '                        <button class="map-marker_description_btn" data-btn-soldier-route="{{ properties.coordinatesForBalloon }}">проложить маршрут</button>\n' +
             '                    </div>\n' +
