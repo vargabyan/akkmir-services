@@ -1,3 +1,34 @@
+<?php
+$data = file_get_contents('data.json');
+$result = json_decode($data, true);
+$response_data_contacts = [];
+$key_value = [];
+
+foreach ($result['features'] as $item) {
+    if ($key_value) {
+        if (!in_array($item['properties']['city'], $key_value)) {
+            array_push($key_value, $item['properties']['city']);
+        }
+    }
+    else {
+        array_push($key_value, $item['properties']['city']);
+    }
+}
+
+foreach ($key_value as $key_value_item) {
+    array_push($response_data_contacts, ['city' => $key_value_item, "address" => []]);
+}
+
+foreach ($result['features'] as $item) {
+    foreach ($response_data_contacts as $key => $city_item) {
+        if ($city_item['city'] === $item['properties']['city']) {
+            array_push($response_data_contacts[$key]['address'], ['name' => $item['properties']['address'], 'location' => $item['properties']['coordinatesForBalloon'], 'services' => $item['properties']['services'], 'tel' => $item['properties']['tel'] ]);
+        }
+    }
+}
+?>
+
+
 <section class="modal-wrapper" data-modal-wrapper data-modal-appointment>
     <div class="modal_content" data-modal-content>
         <button class="modal_btn-close" data-modal-btn-close></button>
@@ -10,12 +41,12 @@
                 <div class="contacts_form_item" data-select-wrapper>
                     <span class="contacts_form_item_label">Адреса автосервисов</span>
                     <span class="contacts_form_item_input" data-select-value-and-btn>г. Екатеринбург</span>
-                    <div class="contacts_form_select_label-wrapper" data-select-option-wrapper>
-                        <div>
-                            <?php foreach ([1,2,3,4,5,6,7,8,9,10] as $item) { ?>
+                    <div class="contacts_form_select_label-wrapper" data-select-option-wrapper data-contacts-form-city>
+                        <div class="active">
+                            <?php foreach ($response_data_contacts as $city) { ?>
                                 <label class="contacts_form_select_label">
-                                    Нижний Тагил
-                                    <input type="radio" name="select-radio" value="Нижний Тагил" data-select-option>
+                                    <?= $city['city'] ?>
+                                    <input type="radio" name="select-radio-city" value="<?= $city['city'] ?>" data-select-option data-select-contacts-city>
                                 </label>
                             <?php } ?>
                         </div>
@@ -25,14 +56,16 @@
                 <div class="contacts_form_item" data-select-wrapper>
                     <span class="contacts_form_item_input" data-select-value-and-btn>ул. Шефская 95А</span>
                     <div class="contacts_form_select_label-wrapper" data-select-option-wrapper>
-                        <div>
-                            <?php foreach ([1,2,3,4,5,6,7,8,9,10] as $item) { ?>
-                                <label class="contacts_form_select_label">
-                                    ул. Аппаратная, 5
-                                    <input type="radio" name="select-radio" value="ул. Аппаратная, 5" data-select-option>
-                                </label>
-                            <?php } ?>
-                        </div>
+                        <?php foreach ($response_data_contacts as $key => $city) { ?>
+                            <div class="<?= $key === 0 ? 'active-first' : '' ?>" data-select-collection-city-id="<?= $city['city'] ?>">
+                                <?php foreach ($city['address'] as $address) { ?>
+                                    <label class="contacts_form_select_label">
+                                        <?= $address['name'] ?>
+                                        <input type="radio" name="select-radio-address" value="<?= $address['name'] ?>" data-address-location="<?= $address['location'][0] ?>, <?=$address['location'][1] ?>" data-select-option data-select-contacts-address>
+                                    </label>
+                                <?php } ?>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -41,14 +74,18 @@
                 <span class="contacts_form_item_label">Выберите услугу</span>
                 <span class="contacts_form_item_input" data-select-value-and-btn>Замена аккумулятора</span>
                 <div class="contacts_form_select_label-wrapper" data-select-option-wrapper>
-                    <div>
-                        <?php foreach ([1,2,3,4,5,6,7,8,9,10] as $item) { ?>
-                            <label class="contacts_form_select_label">
-                                Ремонт тормозной системы
-                                <input type="radio" name="select-radio" value="Ремонт тормозной системы" data-select-option>
-                            </label>
+                    <?php foreach ($response_data_contacts as $city) { ?>
+                        <?php foreach ($city['address'] as $key => $address) { ?>
+                            <div class="<?= $key === 0 ? 'active-first' : '' ?>" data-select-collection-address-id="<?= $address['name']?>">
+                                <?php foreach ($address['services'] as $service) { ?>
+                                    <label class="contacts_form_select_label">
+                                        <?= $service ?>
+                                        <input type="radio" name="select-radio-service" value="<?= $service ?>" data-select-option>
+                                    </label>
+                                <?php } ?>
+                            </div>
                         <?php } ?>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
 
@@ -198,29 +235,7 @@ $response_data_cities = [
 
 <section class="modal-wrapper" data-modal-wrapper data-modal-map>
     <div class="modal-map_content" data-modal-content>
-        <div class="map-marker-wrapper" data-map-marker-wrapper>
-            <div class="map-marker" data-map-marker></div>
-            <div class="map-marker_description" data-map-marker-description>
-                <div class="map-marker_description_head">
-                    <div class="map-marker_description_title-wrapper">
-                        <p class="map-marker_description_title">
-                            г. Екатеринбург
-                            <span>ул. Шефская 95А</span>
-                        </p>
-                        <p class="map-marker_description_working-hours">
-                            <span>С 8:00 до 21:00</span> без выходных
-                        </p>
-                    </div>
-                    <button class="map-marker_btn-close" data-map-marker-btn-close></button>
-                </div>
-                <a class="map-marker_description_tel" href="tel:+7343261-62-62">+7 343 261-62-62</a>
-                <div class="map-marker_description_footer">
-                    <button class="map-marker_description_btn">Выбрать услугу и записаться</button>
-                    <button class="map-marker_description_btn">проложить маршрут</button>
-                </div>
-            </div>
-        </div>
         <button class="modal-map_btn-close" data-modal-btn-close></button>
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A199d8316421c34bab0bf81400a1ea3bd857cfb587baa6a6848cb7d87766c765f&amp;source=constructor" width="1076" height="665" frameborder="0"></iframe>
+        <div class="map" id="map"></div>
     </div>
 </section>

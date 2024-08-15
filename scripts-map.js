@@ -45,13 +45,20 @@ function init() {
         const objectId = e.get('objectId');
         if (e.get('type') === 'mouseenter') {
             objectManager.objects.setObjectOptions(objectId, {
-                iconImageHref: 'images/map-icon-yellow.svg' // Путь к иконке при наведении
+                iconImageHref: 'images/map-icon-yellow.svg'
             });
         } else {
             objectManager.objects.setObjectOptions(objectId, {
-                iconImageHref: 'images/map-icon.svg' // Путь к исходной иконке
+                iconImageHref: 'images/map-icon.svg'
             });
         }
+    });
+
+    objectManager.objects.events.add('balloonclose', function (e) {
+        var objectId = e.get('objectId');
+        objectManager.objects.setObjectOptions(objectId, {
+            iconImageHref: 'images/map-icon.svg'
+        });
     });
 
     objectManager.objects.events.add(['click'], function (e) {
