@@ -153,7 +153,6 @@ document.addEventListener('click', e => {
 })
 
 document.addEventListener('change', e => {
-
     const option = e.target.closest(`[data-select-option]`);
 
     if (option) {
@@ -548,15 +547,16 @@ document.addEventListener('input', e => {
     const btn = e.target.closest('[data-select-contacts-city]');
 
     if (btn) {
+        const wrapper = btn.closest('[data-selects-core-wrapper]');
         const btnValue = btn.value;
 
         document.querySelectorAll(`[data-select-collection-city-id]`).forEach( item => {
             item.classList.remove('active')
             item.classList.remove('active-first')
         })
-        document.querySelector(`[data-select-collection-city-id="${btnValue}"]`).classList.add('active')
+        wrapper.querySelector(`[data-select-collection-city-id="${btnValue}"]`).classList.add('active')
 
-        document.querySelectorAll('[data-select-collection-city-id] input').forEach( item => {
+        wrapper.querySelectorAll('[data-select-collection-city-id] input').forEach( item => {
             const wrapper = item.closest('[data-select-wrapper]');
             const selectValue = wrapper.querySelector('[data-select-value-and-btn]');
 
@@ -564,7 +564,7 @@ document.addEventListener('input', e => {
             selectValue.classList.remove('active')
             selectValue.textContent = 'ул. Шефская 95А'
         })
-        document.querySelectorAll('[data-select-collection-address-id] input').forEach( item => {
+        wrapper.querySelectorAll('[data-select-collection-address-id] input').forEach( item => {
             const wrapper = item.closest('[data-select-wrapper]');
             const selectValue = wrapper.querySelector('[data-select-value-and-btn]');
 
@@ -579,17 +579,18 @@ document.addEventListener('input', e => {
     const btn = e.target.closest('[data-select-contacts-address]');
 
     if (btn) {
+        const wrapper = btn.closest('[data-selects-core-wrapper]');
         const btnValue = btn.value;
 
-        document.querySelectorAll(`[data-select-collection-address-id]`).forEach( item => {
+        wrapper.querySelectorAll(`[data-select-collection-address-id]`).forEach( item => {
             item.classList.remove('active')
             item.classList.remove('active-first')
         })
-        document.querySelector(`[data-select-collection-address-id="${btnValue}"]`).classList.add('active')
+        wrapper.querySelector(`[data-select-collection-address-id="${btnValue}"]`).classList.add('active')
 
-        document.querySelectorAll('[data-select-collection-address-id] input').forEach( item => {
-            const wrapper = item.closest('[data-select-wrapper]');
-            const selectValue = wrapper.querySelector('[data-select-value-and-btn]');
+        wrapper.querySelectorAll('[data-select-collection-address-id] input').forEach( item => {
+            const selectWrapper = item.closest('[data-select-wrapper]');
+            const selectValue = selectWrapper.querySelector('[data-select-value-and-btn]');
 
             item.checked = false;
             selectValue.classList.remove('active')

@@ -36,7 +36,7 @@ foreach ($result['features'] as $item) {
             Запишитесь в автосервис в удобном для вас городе
             <span>Наш менеджер свяжется с вами в ближайшее время для уточнения деталей заявки</span>
         </h2>
-        <form class="modal_form" action="">
+        <form class="modal_form" action="" data-selects-core-wrapper>
             <div class="modal_form_special_item-wrapper">
                 <div class="contacts_form_item" data-select-wrapper>
                     <span class="contacts_form_item_label">Адреса автосервисов</span>
@@ -55,7 +55,7 @@ foreach ($result['features'] as $item) {
 
                 <div class="contacts_form_item" data-select-wrapper>
                     <span class="contacts_form_item_input" data-select-value-and-btn>ул. Шефская 95А</span>
-                    <div class="contacts_form_select_label-wrapper" data-select-option-wrapper>
+                    <div class="contacts_form_select_label-wrapper" data-select-option-wrapper data-contacts-form-address>
                         <?php foreach ($response_data_contacts as $key => $city) { ?>
                             <div class="<?= $key === 0 ? 'active-first' : '' ?>" data-select-collection-city-id="<?= $city['city'] ?>">
                                 <?php foreach ($city['address'] as $address) { ?>
@@ -73,7 +73,7 @@ foreach ($result['features'] as $item) {
             <div class="contacts_form_item" data-select-wrapper>
                 <span class="contacts_form_item_label">Выберите услугу</span>
                 <span class="contacts_form_item_input" data-select-value-and-btn>Замена аккумулятора</span>
-                <div class="contacts_form_select_label-wrapper" data-select-option-wrapper>
+                <div class="contacts_form_select_label-wrapper" data-select-option-wrapper data-contacts-form-services>
                     <?php foreach ($response_data_contacts as $city) { ?>
                         <?php foreach ($city['address'] as $key => $address) { ?>
                             <div class="<?= $key === 0 ? 'active-first' : '' ?>" data-select-collection-address-id="<?= $address['name']?>">
@@ -95,7 +95,7 @@ foreach ($result['features'] as $item) {
             </label>
             <label class="modal_form_label-core">
                 Телефон*
-                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="8 900 000 00 00">
+                <input type="tel" pattern="[0-9]{11}" placeholder="8 900 000 00 00">
             </label>
 
             <div class="modal_footer">
@@ -132,7 +132,7 @@ foreach ($result['features'] as $item) {
             </label>
             <label class="modal_form_label-core">
                 Телефон*
-                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="8 900 000 00 00">
+                <input type="tel" pattern="[0-9]{11}" placeholder="8 900 000 00 00">
             </label>
             <label class="modal_form_label-core">
                 Задать свой вопрос
@@ -173,7 +173,7 @@ foreach ($result['features'] as $item) {
             </label>
             <label class="modal_form_label-core">
                 Телефон*
-                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="8 900 000 00 00">
+                <input type="tel" pattern="[0-9]{11}" placeholder="8 900 000 00 00">
             </label>
 
             <div class="modal_footer">
@@ -196,22 +196,6 @@ foreach ($result['features'] as $item) {
 </section>
 
 
-<?php
-
-$response_data_cities = [
-    'Екатеринбург',
-    'Нижний Тагил',
-    'Первоуральск',
-    'Полевской',
-    'Серов',
-    'Сысерть',
-    'Тобольск',
-    'Тюмень',
-]
-
-?>
-
-
 <section class="modal-wrapper" data-modal-wrapper data-modal-select-city>
     <div class="modal_content" data-modal-content>
         <button class="modal_btn-close" data-modal-btn-close></button>
@@ -222,10 +206,10 @@ $response_data_cities = [
             <input type="text" placeholder="поиск" data-modal-select-cit-search-input>
         </label>
         <form class="modal_form-select-city" action="">
-            <?php foreach ($response_data_cities as $item) { ?>
+            <?php foreach ($response_data_contacts as $item) { ?>
                 <label class="modal_form-select-city_label" data-modal-select-city-input>
-                    <?= $item ?>
-                    <input type="radio" value="<?= $item ?>" name="city">
+                    <?= $item['city'] ?>
+                    <input type="radio" value="<?= $item['city'] ?>" name="city">
                 </label>
             <?php } ?>
         </form>

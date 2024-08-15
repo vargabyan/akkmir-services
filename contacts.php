@@ -41,7 +41,7 @@ foreach ($result['features'] as $item) {
 <section class="core-container contacts">
     <h1 class="contacts_header site-header">Контакты</h1>
     <div class="contacts_content">
-        <form class="contacts_form" action="" method="POST" data-contacts-form>
+        <form class="contacts_form" action="" method="POST" data-selects-core-wrapper data-contacts-form>
             <div class="contacts_form_item" data-select-wrapper>
                 <span class="contacts_form_item_label">Выберите город</span>
                 <span class="contacts_form_item_input" data-select-value-and-btn>г. Екатеринбург</span>
