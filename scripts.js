@@ -364,9 +364,11 @@ document.addEventListener('click', e => {
 
     if (input) {
         const modalWrapper = input.closest('[data-modal-select-city]');
-        const btnOpen = document.querySelector('[data-btn-select-city]');
+        const allBtnOpen = document.querySelectorAll('[data-btn-select-city]');
 
-        btnOpen.textContent = input.querySelector('input').value;
+        allBtnOpen.forEach( item => {
+            item.textContent = input.querySelector('input').value;
+        })
         modalWrapper.classList.remove('active');
         document.querySelector('body').style['overflow'] = '';
     }
